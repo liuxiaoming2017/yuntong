@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>新闻</key>
+	<string>NewsPageController</string>
+	<key>新闻icon</key>
+	<string>NewsPageController</string>
+	<key>读报</key>
+	<string>PeopleDailyPageController</string>
+	<key>服务</key>
+	<string>NJSquarePageController</string>
+	<key>外链</key>
+	<string>RootWebPageController</string>
+	<key>积分商城</key>
+	<string>CreditMenuViewController</string>
+	<key>本地</key>
+	<string>LocalPageController</string>
+	<key>报料</key>
+	<string>DishViewController</string>
+	<key>直播</key>
+	<string>ScenePageController</string>
+	<key>生活</key>
+	<string>LifePageController</string>
+	<key>政情</key>
+	<string>PoliticalPageController</string>
+	<key>问答+</key>
+	<string>FDInteractionPlusViewController</string>
+	<key>话题+</key>
+	<string>FDTopicListViewController</string>
+	<key>个人中心</key>
+	<string>BottomPersonalCenterController</string>
+	<key>服务分类</key>
+	<string>FDServiceSortController</string>
+	<key>推荐</key>
+	<string>FDRecommendViewController</string>
+	<key>话题详情</key>
+	<string>FDTopicPlusDetailViewController</string>
+</dict>
+</plist>

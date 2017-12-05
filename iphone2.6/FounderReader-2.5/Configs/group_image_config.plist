@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>column_count_说明</key>
+		<string>组图每行显示的图片个数</string>
+		<key>column_count</key>
+		<integer>1</integer>
+		<key>column_space_说明</key>
+		<string>每行图片之间的间隔</string>
+		<key>column_space</key>
+		<integer>13</integer>
+		<key>name_font_size_说明</key>
+		<string>图片标题字体大小</string>
+		<key>name_font_size</key>
+		<integer>15</integer>
+		<key>name_text_color_说明</key>
+		<string>图片标题字体颜色</string>
+		<key>name_text_color</key>
+		<string>0,0,0</string>
+		<key>is_group_image_说明</key>
+		<string>是否以组图方式进行显示</string>
+		<key>is_group_image</key>
+		<true/>
+		<key>has_bg_image</key>
+		<true/>
+		<key>column_height_说明</key>
+		<string>每行图片的高度，此配置结合column_count一起做调整</string>
+		<key>column_height</key>
+		<integer>162</integer>
+		<key>background_color_说明</key>
+		<string>列表背景色设置</string>
+		<key>background_color</key>
+		<string>255,255,255</string>
+		<key>is_show_title_说明</key>
+		<string>列表中是否显示图片的标题</string>
+		<key>is_show_title</key>
+		<true/>
+	</dict>
+</array>
+</plist>

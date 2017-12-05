@@ -1,0 +1,139 @@
+begin transaction;
+
+create table if not exists versions (
+    column_id           integer primary key,
+    columns_version     integer not null,
+    articles_version    integer not null
+);
+
+create table if not exists columns (
+    column_id               integer primary key,
+    column_topArticleNum    integer not null,
+    column_name             text,
+    column_type             text,
+    column_style            text,
+    column_value            text,
+    column_linkUrl          text,
+    column_show             bool,
+    phone_icon_url          text,
+    phone_retina_icon_url   text,
+    parent_column_id        integer not null,
+    display_order           integer not null
+);
+
+create table if not exists articles (
+    article_id          integer primary key,
+    article_type        integer not null,
+    title               text,
+    summary             text,
+    publish_time        text,
+    image_url           text,
+    imageUrl_Big        text,
+    groupImage_url      text,
+    video_url           text,
+    content_url         text,
+    share_url           text,
+    extproperty         text,
+    category            text,
+    readCount           text,
+    commentCount        text,
+    imageSize           text,
+    comments            text,
+    greatCount          text,
+    is_BigPic           integer,
+    is_Relative         integer,
+    column_Name         text,
+    isRead              bool,
+    linkID              integer not null,
+    type                integer,
+    position            integer,
+    adOrder             integer,
+    startTime           text,
+    endTime             text,
+    pageTime            integer,
+    advID               integer,
+    sizeScale           integer,
+    imgAdvUrl           text,
+    discussClosed       bool,
+    tag                 text,
+    audioTitle          text
+);
+
+create table if not exists oils (
+article_id          integer primary key,
+article_type        integer not null,
+title               text,
+summary             text,
+publish_time        text,
+image_url           text,
+imageUrl_Big        text,
+groupImage_url      text,
+video_url           text,
+content_url         text,
+share_url           text,
+extproperty         text,
+category            text,
+readCount           text,
+commentCount        text,
+imageSize           text,
+comments            text,
+greatCount          text,
+is_BigPic           integer,
+is_Relative         integer,
+column_Name         text,
+isRead              bool,
+linkID              integer not null
+);
+
+create table if not exists has_more (
+    id              integer primary key,
+    column_id       integer not null,
+    row_number      integer not null,
+    has_more        integer not null
+);
+
+create table if not exists column_article (
+    display_order   integer primary key,
+    column_id       integer not null,
+    article_id      integer not null
+);
+
+create table if not exists favorites (
+    article_id      integer primary key,
+    column_id       integer,
+    article_type    integer,
+    title           text,
+    summary         text,
+    publish_time    text,
+    image_url       text,
+    groupImage_url  text,
+    video_url       text,
+    content_url     text,
+    share_url       text,
+    extproperty     text,
+    collectTime     integer,
+    type            integer
+);
+
+create table if not exists lives(
+    lives_id      integer primary key,
+    content         text,
+    countDiscuss    integer,
+    countPraise     integer,
+    distance        integer,
+    title           text,
+    location        text,
+    publishtime     text,
+    user            text,
+    groupImage_url  text,
+    userIcon_url    text,
+    userID          integer
+);
+
+create table if not exists recommends(
+recommend      integer primary key autoincrement,
+content         text,
+time    text,
+column_id       integer
+);
+commit;

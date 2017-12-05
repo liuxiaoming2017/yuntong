@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>column_show_logo_说明</key>
+	<string>是否显示logo</string>
+	<key>column_show_logo</key>
+	<true/>
+	<key>column_is_pic_说明</key>
+	<string>标题是否是图片</string>
+	<key>column_is_pic</key>
+	<false/>
+	<key>column_bar_height_说明</key>
+	<string>栏目条高度</string>
+	<key>column_bar_height</key>
+	<integer>44</integer>
+	<key>colomn_title_size_说明</key>
+	<string>标题字体大小</string>
+	<key>colomn_title_size</key>
+	<integer>14</integer>
+</dict>
+</plist>

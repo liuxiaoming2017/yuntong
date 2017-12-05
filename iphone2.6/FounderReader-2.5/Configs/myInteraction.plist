@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>我的活动</string>
+		<key>icon</key>
+		<string>icon-myActivity</string>
+		<key>controllerClass</key>
+		<string>MyActivityController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>我的收藏</string>
+		<key>icon</key>
+		<string>icon-myCollection</string>
+		<key>controllerClass</key>
+		<string>FavoritePageController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>我的评论</string>
+		<key>icon</key>
+		<string>icon-myComment</string>
+		<key>controllerClass</key>
+		<string>MyCommentLIstController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>我的问答</string>
+		<key>icon</key>
+		<string>icon-myAnswer</string>
+		<key>controllerClass</key>
+		<string>MyAnswerController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>我的兑换券</string>
+		<key>icon</key>
+		<string>icon-myCoupon</string>
+		<key>controllerClass</key>
+		<string>MyCouponController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>我的话题</string>
+		<key>icon</key>
+		<string>icon-myTopic</string>
+		<key>controllerClass</key>
+		<string>FDMyTopicViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>我的问政</string>
+		<key>icon</key>
+		<string>icon-myTopic</string>
+		<key>controllerClass</key>
+		<string>FDMyTopicDetailViewController</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>login_button_color说明</key>
+	<string>登陆\注册\重置密码 页面主题颜色 之前245,67,67</string>
+	<key>login_button_color</key>
+	<string>0,182,249</string>
+	<key>navbar_titlecolor_didselect说明</key>
+	<string>顶部导航栏未选中字体颜色 </string>
+	<key>navbar_titlecolor_didselect</key>
+	<string>255,255,255</string>
+	<key>navbar_titlecolor_selected说明</key>
+	<string>顶部导航栏选中字体颜色 </string>
+	<key>navbar_titlecolor_selected</key>
+	<string>255,255,255</string>
+	<key>tabbar_titlecolor_diselect说明</key>
+	<string>首页底部导航栏未选中字体颜色 </string>
+	<key>tabbar_titlecolor_diselect</key>
+	<string>123,123,123</string>
+	<key>tabbar_imagecolor_diselect说明</key>
+	<string>首页底部导航栏未选中图片颜色(不填表示默认灰度)</string>
+	<key>tabbar_imagecolor_diselect</key>
+	<string></string>
+	<key>cell_statusLabel_color说明</key>
+	<string>cell标签字体颜色(蓝色:19,175,253)</string>
+	<key>cell_statusLabel_color</key>
+	<string>245,67,67</string>
+	<key>nav_bar_color说明</key>
+	<string>栏目导航栏背景色 19,183,246</string>
+	<key>nav_bar_color</key>
+	<string>19,183,246</string>
+</dict>
+</plist>

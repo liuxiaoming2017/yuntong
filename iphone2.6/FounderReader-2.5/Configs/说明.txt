@@ -1,0 +1,23 @@
+
+页面类型说明：
+
+ListColumnPageController：头条+频道列表式页面
+WebChannelPageController：TabBar式频道+Web频道内容式页面
+WebPageController:单个Web栏目页面
+NewsPageController：头条+TabBar式频道+新闻列表式页面
+SquaredPageController:头条+九宫格频道页面
+ImageSquaredPageController：头条+TabBar式频道+图册式页面
+PDFPageController 旧原版式
+PeopleDailyPDFPageController 新原版式
+ImagePageController 影像
+
+
+替换图片说明：
+video_cell_icon.png --视频列表上得视频图标
+listcolumn_cell_background.png --专题列表的背景图片
+active_cell_background.png  --活动列表的背景图片
+middle_cell_thumbtail_background.png --新闻列表缩略图的阴影效果背景图片
+middle_cell_background.png --新闻列表的背景图片
+group_image_border@2x.png --组图阴影效果背景图片
+group_thumbnail_more_default@2x.png --组图查看更多背景图片
+group_thumbnail_default@2x.png --组图默认背景图

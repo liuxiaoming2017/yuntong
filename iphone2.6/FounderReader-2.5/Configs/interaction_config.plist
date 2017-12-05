@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>inform_name_label</key>
+	<string>提问标题:</string>
+	<key>inform_name_placeholder</key>
+	<string>必填,请输入您的提问标题</string>
+	<key>inform_phone_no_label</key>
+	<string>联系方式:</string>
+	<key>inform_phone_no_placeholder</key>
+	<string>必填,请输入联系电话</string>
+	<key>inform_subject_label</key>
+	<string>姓名:</string>
+	<key>inform_subject_placeholder</key>
+	<string>必填,请输入联系人</string>
+	<key>inform_content_label</key>
+	<string>内容:</string>
+	<key>inform_content_placeholder</key>
+	<string>必填,请输入报料内容</string>
+	<key>feedback_name_label</key>
+	<string>姓名:</string>
+	<key>feedback_name_placeholder</key>
+	<string>选填,请输入您的姓名</string>
+	<key>feedback_phone_no_label</key>
+	<string>联系电话:</string>
+	<key>feedback_phone_no_placeholder</key>
+	<string>选填,请输入您的手机号码</string>
+	<key>feedback_email_label</key>
+	<string>电子邮件:</string>
+	<key>feedback_email_placeholder</key>
+	<string>选填,请输入您的电子邮件</string>
+	<key>feedback_content_label</key>
+	<string>反馈内容:</string>
+	<key>feedback_content_placeholder</key>
+	<string>必填,请输入反馈内容</string>
+</dict>
+</plist>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="zh-CN">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="Cache-Control" content="max-age=1700">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta http-equiv="cleartype" content="on">
+    <link href="base.css?v=2" rel="stylesheet">
+    <style>
+        img{width:100%;}
+    </style>
+    <script language="javascript">
+        var nowDate = new Date();
+        var articleUrl = "article.js?t=" + nowDate.getTime();
+        document.write("<script src='" + articleUrl + "'><\/script>");
+        function viewImage(index){location.href = "image:///index=" + index;}
+        function viewVideo(url){
+            location.href = "video:///url=" + url;}
+    </script>
+    <script src="js.combine.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="newsDetailController">
+<img id="doc-load-img" src="loading.png" style="width:100%;"/>
+<div ng-show="lazyShow==true">
+    <!--稿件内容详情-->
+    <article class="am-article">
+        <!--新闻标题-->
+        <div class="am-article-hd">
+            <h1 id="doc-article-title" class="am-article-title news_detail_title" ng-bind="metaInfo.title"></h1>
+            <h1 id="doc-article-subtitle" class="am-article-title news_detail_subtitle" ng-bind="metaInfo.subtitle"></h1>
+            <p class="am-article-meta news_detail_meta">
+                <span class="news_detail_time" ng-bind="metaInfo.publishTime"></span>
+                <span class="news_detail_source" ng-bind="metaInfo.source"></span>
+            </p>
+        </div>
+        <!--正文内容-->
+        <div id="doc-article-content" class="am-article-bd news_detail_content"></div>
+        <!--点赞分享-->
+        <div ng-cloak ng-show="isApp == 0 && articleStat.countPraise!=null">
+            <div class="news_detail_praise" ng-click="onPraise()" ng-class="{news_detail_praise:isPraise==false, news_detail_praise_hl:isPraise==true}">
+                <div class="news_detail_praise_icon" style="background-image:url('icon-images.png');"></div>
+                <span ng-bind="articleStat.countPraise"></span>
+            </div>
+        </div>
+        <!--广告-->
+        <div ng-cloak ng-if="curAdvInfo.title.length > 0">
+            <a href="{{curAdvInfo.contentUrl}}">
+                <img class="news_detail_adv_img lazy" ng-src="{{curAdvInfo.imgUrl}}" alt="">
+                <div class="news_detail_adv_title"><span class="news_detail_adv_tag">推广</span><span ng-bind="curAdvInfo.title"></span></div>
+            </a>
+        </div>
+    </article>
+    <!--相关新闻-->
+    <div ng-cloak ng-if="article.related.length > 0" class="news_detail_relate">
+        <div class="news_detail_group_name"><span>相关新闻</span></div>
+        <hr class="news_detail_group_line" />
+        <ul class="am-list news_detail_related_ul">
+            <li ng-repeat="item in article.related" class="am-g">
+                <a ng-href="{{item.aUrl}}">
+                    <div class="news_detail_related_title"><span ng-bind="item.title"></span></div>
+                    <div class="news_detail_related_info">
+                        <span ng-bind="item.publishTime"></span>
+                        <span ng-bind="item.source">&nbsp;&nbsp;</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--热门评论-->
+    <div ng-cloak ng-show="hotComments.length > 0">
+        <div class="news_detail_group_name"><span>热门评论</span></div>
+        <hr class="news_detail_group_line" />
+        <ul class="am-list news_comment_cell">
+            <li ng-repeat="item in hotComments" class="am-g am-list-item-desced">
+                <div style="width:100%;">
+                    <div class="news_comment_face" style="background-image:url('icon-images.png');"></div>
+                    <div class="news_comment_content">
+                        <div style="width:100%;">
+                            <div class="news_comment_info">
+                                <p class="news_comment_nickname" ng-bind="item.userName" style="padding:0px;margin:0px;"></p>
+                                <p class="news_comment_time" ng-bind="item.createTime" style="padding:0px;margin:0px;"></p>
+                            </div>
+                            <div class="news_comment_operation">
+                                <span ng-if="isApp==0" class="news_comment_reply" ng-click="onCommentReply(item)">回复</span>
+                                <div ng-click="onCommentPraise(item.commentID)" ng-class="{news_comment_praise_icon:item.isPraise==false,news_comment_praise_hl_icon:item.isPraise==true}" style="background-image:url('icon-images.png');"></div>
+                                <span class="news_comment_praise_count" ng-bind="item.countPraise"></span>
+                            </div>
+                        </div>
+                        <p class="news_comment_text" ng-bind="item.content"></p>
+                        <div ng-cloak ng-show="item.isReply" class="news_comment_submit_info">
+                            <textarea name="myComment" required ng-model="item.replyContent"  placeholder="说点什么好..."></textarea>
+                            <button class="am-btn am-btn-secondary news_comment_submit" ng-click="submitReply(item)">提交</button>
+                        </div>
+                        <div ng-show="item.parentID > 0" class="news_comment_reply_info">
+                            <p class="news_comment_nickname" ng-bind="item.parentUserName"></p>
+                            <p class="news_comment_text" ng-bind="item.parentContent"></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+
+</html>

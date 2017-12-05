@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>tint_color_说明</key>
+	<string>导航条左右按钮字体颜色，此配置为全局配置，修改之后所有页面统一效果</string>
+	<key>tint_color</key>
+	<string>255,255,0</string>
+</dict>
+</plist>

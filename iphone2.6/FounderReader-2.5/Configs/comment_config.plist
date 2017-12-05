@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>comment_visiable_说明</key>
+	<string>是否显示评论</string>
+	<key>comment_visiable</key>
+	<true/>
+	<key>comment_bg_color</key>
+	<string>100,150,180</string>
+	<key>comment_text_view_border_color</key>
+	<string>100,150,200</string>
+	<key>cell_edge</key>
+	<string>{8,9.5,8,9.5}</string>
+	<key>username_content_space</key>
+	<real>4.5</real>
+	<key>username_text_color</key>
+	<string>0,100,178</string>
+	<key>username_font_size</key>
+	<string>11</string>
+	<key>content_text_color</key>
+	<string>51,51,51</string>
+	<key>content_font_size</key>
+	<integer>14</integer>
+	<key>odd_cell_bg_color</key>
+	<string>162,207,236</string>
+	<key>even_cell_bg_color</key>
+	<string>235,235,235</string>
+	<key>more_cell_height</key>
+	<real>51.5</real>
+	<key>more_cell_title_color</key>
+	<string>72,72,72</string>
+	<key>more_cell_title_font_size</key>
+	<integer>14</integer>
+</dict>
+</plist>

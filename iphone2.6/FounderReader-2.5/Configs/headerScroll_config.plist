@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>配置说明</key>
+	<string>头条图片新闻页面配置</string>
+	<key>is_autoScroll_说明</key>
+	<string>NO表示头条图片新闻不自动轮播；YES表示自动轮播</string>
+	<key>is_autoScroll</key>
+	<true/>
+	<key>is_dotPageFooter_说明</key>
+	<string>0表示页脚为下划线样式;1表示圆圈带数字的样式;2表示圆圈样式</string>
+	<key>is_dotPageFooter</key>
+	<integer>1</integer>
+	<key>pageFooter_frame_说明</key>
+	<string>页脚区域位置</string>
+	<key>pageFooter_frame</key>
+	<string>{{260,140},{50,10}}</string>
+	<key>timer_interval_说明</key>
+	<string>轮播时间间隔</string>
+	<key>timer_interval</key>
+	<integer>5</integer>
+</dict>
+</plist>

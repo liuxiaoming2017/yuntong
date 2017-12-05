@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>改动全局颜色--需要改动的全局图片</key>
+	<string>如果有多倍图，需要2x，3x同时更换</string>
+	<key>Q1</key>
+	<string>icon_left_btn-press</string>
+	<key>Q2</key>
+	<string>nav_bar_background</string>
+	<key>Q3</key>
+	<string>checkbox_press</string>
+	<key>Q4</key>
+	<string>lb_pressed_6+</string>
+	<key>Q5</key>
+	<string>icon_s</string>
+	<key>Q6</key>
+	<string>icon-video</string>
+	<key>Q7</key>
+	<string>toolbar_loved_press</string>
+	<key>Q8</key>
+	<string>toolbar_share_press</string>
+	<key>Q9</key>
+	<string>toolbar_collect_press</string>
+	<key>Q10</key>
+	<string>toolbar_comment_press</string>
+	<key>改动导航颜色--对应需要改动的图片</key>
+	<string>如果有多倍图，需要2x，3x同时更换</string>
+	<key>D1</key>
+	<string>icon-head</string>
+	<key>D2</key>
+	<string>icon-edit</string>
+	<key>D3</key>
+	<string>icon_righthead_more</string>
+	<key>D4</key>
+	<string>close</string>
+	<key>D5</key>
+	<string>nav_bar_back</string>
+	<key>D6</key>
+	<string>btn_return</string>
+	<key>D7</key>
+	<string>icon-point</string>
+	<key>D8</key>
+	<string>icon-integralRule</string>
+	<key>D9</key>
+	<string>btn_new_sure</string>
+	<key>D10</key>
+	<string>icon-scoreRank</string>
+	<key>D11</key>
+	<string>icon-head-high</string>
+	<key>D12</key>
+	<string>icon-refresh</string>
+</dict>
+</plist>

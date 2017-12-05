@@ -1,0 +1,37 @@
+<html>
+    <head><link href="content.css" rel="stylesheet" type="text/css" /></head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"></meta>
+    <body>
+        <div id="title_section">
+            
+            <div id='title'>{{title}}</div>
+            <div id='subtitle'>{{ptime}}&nbsp;&nbsp;{{source}}</div>
+            
+        </div>
+        
+        
+        <div id="body_section" class="fontclass">{{body}}</div>
+        
+        <script type="text/javascript">
+            function extend_image(url,element){
+                y=0;
+                while( element != null ) {
+                    y += element.offsetTop;
+                    element = element.offsetParent;
+                    
+                }
+                location.href="image:///"+(y - window.pageYOffset)+"///"+url;
+            }
+            
+            function extend_video(imageUrl,videoUrl,element){
+                y=0;
+                while( element != null ) {
+                    y += element.offsetTop;
+                    element = element.offsetParent;
+                    
+                }
+                location.href="image:///"+(y - window.pageYOffset)+"///"+imageUrl + "///video:///" + videoUrl; 
+            }
+            
+            </script>
+    </body></html>

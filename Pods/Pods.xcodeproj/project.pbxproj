@@ -1,0 +1,2270 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00D4301F30E60AB0751F3863E923BFAF /* QNHijackingDetectWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E50FFFE66133403372A4B1932715654 /* QNHijackingDetectWrapper.m */; };
+		00D9523A6AA36B372C40040807226EED /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3300E643384010AE200D30916D3699B8 /* MJPropertyType.m */; };
+		05578FF7A744805AF2F8CF0281D9DCD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE59B0D97841C2542CA3D20540685C26 /* Foundation.framework */; };
+		07727BFDDE0C1124659AA6829C862700 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2AA611C7E401F5B6F10BDAB2875BC4 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09548874B0C5838AE8552CA985218FEF /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B66ED801406E477EB8AE65412279B85 /* TZVideoPlayerController.m */; };
+		10C654808709BE4D1CD56D5027F5D722 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 42537E2DFEFCF5BA916687F9EA96A8FB /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		120E717B81CFE129E6AB4E8AB6E62BC6 /* MJFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EDD53698801F207831308E4B74A3F0 /* MJFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		122ADA64D7A36E10D48E7ED61F2B8A56 /* QNDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = F7917EE11D89A0985782369E2EBC4E87 /* QNDomain.m */; };
+		13E47AD710B59CB935228BD09384106D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE59B0D97841C2542CA3D20540685C26 /* Foundation.framework */; };
+		16397574D5848CBE57C762E5435FA71E /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA911834B1EA30B7FF22BD14E96C8DB /* MJExtensionConst.m */; };
+		1DF93B62A24E9B375AEE187D6C623DD8 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B2ED463027B79DEC87479DA5F1A69C7 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F83A4B7F25C9218913C539ACE7D9E00 /* QNGetAddrInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F10725FE303C14D3F0006FC8168C4D2 /* QNGetAddrInfo.m */; };
+		21113674EAEF00F04FB5E5299970035C /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = D27DA13B21F791A29609E0EB4EA101D9 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2142EABFB5D1835D26D8A8831165D014 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E5352E222D0E23BC52454E953CEB4A /* Masonry-dummy.m */; };
+		222723C0928E93B6D6BD89D7D81BD361 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE59B0D97841C2542CA3D20540685C26 /* Foundation.framework */; };
+		227DC36A81E6C15C9E169EE4884FA696 /* WMPageController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC9301B2F4ACAFBCFB8F94BF3D0407 /* WMPageController-dummy.m */; };
+		24CEE9B8C63ADDD8A10327A451C9BB4F /* TZVideoPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F5D1A929A3F7DAEDC7CC0BA921332ED /* TZVideoPlayerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29504A501803092112E84D29E38CA454 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 56081FDA3950B9ED538F8EC78DBAEF45 /* MJFoundation.m */; };
+		2B11ACD96A40E24F642A30AAA4C7830D /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08BF8778725F76118613B91781E0C8A0 /* WMMenuView.m */; };
+		2F2A3F2ED3CEA9F96260AA2BBCCCEFD2 /* QNNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D15858C095F02C1D4742F54EBC1F33C4 /* QNNetworkInfo.m */; };
+		30878EC2A97A8F9CD57CE3FCD6C9F683 /* QNRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D095822232FD42C491F52B6EA4C8A00 /* QNRecord.m */; };
+		35B8A9743EADAA8F25F3D27F7937249C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C06B1B209CA23EC16EBF65CF890313 /* CoreGraphics.framework */; };
+		3C6F517D84DBDA9017D59ADCBC651618 /* TZPhotoPreviewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 18FAAD1DF20ABF0D01750A9111FDDAA0 /* TZPhotoPreviewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E870941D67AC55F58E9D823F4A68314 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D51B42CC0E52FEF9299E6185096EE /* NSObject+MJCoding.m */; };
+		3E94DB62A24FFDF1061CB44760581C48 /* Pods-FounderReader-2.5-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C3525BEFED8EA4C56BB2C79ECB5043 /* Pods-FounderReader-2.5-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4031144C90BA5FC5C32695333038F5DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE59B0D97841C2542CA3D20540685C26 /* Foundation.framework */; };
+		41E9BDE64F4AF303A45AF36DC1C4B5C1 /* MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 65AA0100E28AE551A5353C8264D083D1 /* MJProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4636BC283F0222605DCE6A07EC2658D7 /* QNTxtResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = FADDF6CD08B8BCCFE70B16420D8A7C48 /* QNTxtResolver.m */; };
+		47E6A6629073C3E740B995B1175FE592 /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A42BE7FEC0170E99C05DAEA07653D8E /* WMPageController.m */; };
+		48123D58437848996B79ACC007894CE6 /* MJExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FF2F3F96ABDFC92A272E5C7F10ACED /* MJExtension-dummy.m */; };
+		490CAF91F2D97390252F9CDCB2A8ED11 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 602ACB25D651BBFE8CF51A99BFD26CC6 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B28607AE79FF06199FF4B0B1F79C0F4 /* TZImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FEBE97DA940BEB1BD3F64C4AD4CF7A84 /* TZImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FF420726929F3CCBB4480072B53D6BA /* QNNetworkInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 68B7F65FEE88B0DEFFBDF2A20D700FF7 /* QNNetworkInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52AFB5E12047080413C9E63C0084E615 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA02C23142F7BB4D5CAB2876040C2D8 /* MJPropertyKey.m */; };
+		52F22CC500FD42C87AA9F7F1CCD095A0 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B160E9C45C207A2363AA52629009144D /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5456CD52FEE79A3B496E6D69A53752D5 /* QNHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 161119E1336EBC5A9BBDC79D9236B50E /* QNHex.m */; };
+		54EE29D1641505DDFB2C2622050FBCC6 /* QNResolverDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 16CDC12B90090E5DDE548A0EB8E3F5A1 /* QNResolverDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55B69B16C18E10ED9E118F529B12750C /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = F0EC7AE371D76C3AEB5C356D76F11524 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5765219211564EADE297C111C81E1279 /* QNTxtResolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A6B220524669DC671B89CDDA0E54BB7 /* QNTxtResolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		592330DE808B7F390A2EC6D3A1E58138 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE59B0D97841C2542CA3D20540685C26 /* Foundation.framework */; };
+		5993B2EC0E5008889076B34D6F3B9CFC /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F248EB3AD04CED3D3DBDC8215C30B2 /* MASLayoutConstraint.m */; };
+		5B562E120ACA062BD999F0652F624ACC /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7192191F2180BE5EE599CF7B07A78B /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EEB16BBBD4F928D44D50ED773E1B493 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB656522A428B9966D0F9435EAA5D /* MASConstraintMaker.m */; };
+		62685DB46BD91B5DE4057A4A2F5557C7 /* Pods-FounderReader-2.5-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B0E71D843403B8FA22EC92F95D769 /* Pods-FounderReader-2.5-dummy.m */; };
+		637909F24E8C3E31EE8166B795005253 /* QNDnsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD4614922AC30E17421D41CD2C17A32 /* QNDnsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		639C228566CB73E471E1AB406F1D2E4F /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4D39409F11E9655A0CDF3677543BBF /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6418330DB3E2A6828FF7CEB4B61B8D92 /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF50C8668F5F39356872D39C8509B83 /* TZImagePickerController.m */; };
+		647FBB123EAA2E579C5C99576AD6E91B /* WMPageController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AF926F54062EEC17A4FD0DC80690DA5 /* WMPageController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6589F4C34E6CD4DC4C83437AB47C192F /* TZAssetCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A23BCB2173B783C0CD3048C7CA5BF78E /* TZAssetCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6845EEE1D2D159F445A7347020F9C442 /* NSBundle+TZImagePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = F44920039426B9DB7588387C15140DD0 /* NSBundle+TZImagePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68DBB89FB34B1876BF8999B32BE07145 /* QNGetAddrInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FB3DF804E4DACB99D01C0429678A140 /* QNGetAddrInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		694ECED62C37B393CE7A4946142414A9 /* TZImagePickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 358C11EB4321130976AC37BF1A5B309F /* TZImagePickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CB4B5215A8859236AC799AFF521D038 /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 229CFB5D6DF013195FBC4EC1CE3A6C14 /* WMProgressView.m */; };
+		6DE7B44682748B2C2EBDF6580EBD3D2E /* QNDnspodEnterprise.h in Headers */ = {isa = PBXBuildFile; fileRef = 70589F303A5789CE634867194AE7C4B2 /* QNDnspodEnterprise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72DC472E171514AEF51FFD687D56D092 /* QNHosts.h in Headers */ = {isa = PBXBuildFile; fileRef = 576772F92E10E243BEE5F174A03BC7A1 /* QNHosts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7489E6B251406AB6B071DE7B44FB2432 /* WMMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 70477DC4CA4D1EB8303A0AB79BBF832E /* WMMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		765D5E9511915964AF656CEE30A43848 /* QNIP.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A816CA41F1000A48437AEE706FD25C /* QNIP.m */; };
+		773B5FC48F9C6048577195B9402430DA /* QNResolvUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = BDA6514063A7509BBBB4325BE183219B /* QNResolvUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77BB6855BAE16DE217613CFDD560CA2B /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 890F897F9F1E3F7AFF58EFFA16E4F79E /* MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78ED1AE540317D87F660454524C88F86 /* TZProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7814106D68297A58919072012348C5B2 /* TZProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79DC5066A1E61630601432C038738EDA /* TZLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E0FA77FB83B44E8C0E983D1068D222 /* TZLocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A27F2E793199C8CF12403AAF39DA5CA /* NSObject+MJCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C7DCDCE4E11D6A9478C4FFC30924B4D /* NSObject+MJCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A4E77FE7C40000F00E91DCC2DE74166 /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A48069DFA548D8AABAA748B037AC8B7D /* TZPhotoPreviewCell.m */; };
+		7A8E8953773959E0EEEB20F67884440B /* TZGifPhotoPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D71DFCA03509F5BB9C1469917778CAE9 /* TZGifPhotoPreviewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A9D17250D5A25B0BA3973E7AB9BC5B4 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 2197AC0F1544CC938543D718503EE4D5 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D35395742DB242F4D7163B5F74CCBB5 /* MJExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CA1F933F3364A7355CF63EDC5C2B8508 /* MJExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DDE84B03D9548153D93B4AED50B7ADE /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 723EA34682F5071594367209AA198F00 /* NSObject+MJClass.m */; };
+		821B1C48D961823FC592E70B3F705F6B /* NSObject+MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B4173F48603308C6DCBA020BB5F5EF4 /* NSObject+MJProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83219F62115143A8689C5656107065CC /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A0A06039C1D6F3FA0272852FB52EF /* TZImagePickerController.bundle */; };
+		843DD931018D33F7A3A99541725E7C18 /* QNRefresher.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5372864E154C5BB6F959E74FFD3B96 /* QNRefresher.m */; };
+		8599135E97877DEA96B4130770FB5301 /* QNHosts.m in Sources */ = {isa = PBXBuildFile; fileRef = E17DB55EE5DDA0BE7F73A27DE9C83684 /* QNHosts.m */; };
+		8603EB76C79BF7529D6D51B541CFB3D1 /* QNResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA47501C0113B00A2207B4664A8C15 /* QNResolver.m */; };
+		895856CA3474F5197BD1FB3595AE3785 /* QNDnsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7392F147B302ECF83CBF0B3AA1336E /* QNDnsManager.m */; };
+		8A6A6F0EEA0EAE6D361095C27E6E5C8F /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC0DF1EE963AED007D7C4E7E4CB5ACD /* TZAssetModel.m */; };
+		8AEDF98057DE612F26675BD1D8F8C91E /* NSObject+MJKeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = D252B56529ED414F9164A72050906B8A /* NSObject+MJKeyValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B83861ED2F835E33B0CBEA85F845742 /* MJExtensionConst.h in Headers */ = {isa = PBXBuildFile; fileRef = A3435A8942BB959C3952C64D3D291DA6 /* MJExtensionConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F8C6E66F821F34B64E2EC5BAABA68EA /* TZAssetModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D41A6A446CEB5F4628EE82EC114F8228 /* TZAssetModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95D7FEDF579BD8924033EA13E31873D0 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA643551817A635E8D640033ECD1F7 /* MASViewAttribute.m */; };
+		978F93B2308A36D036A7C1CC419A6159 /* QNLruCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 7744A73D5300491790B1ED3243F2E1CD /* QNLruCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99BF0777718F865D460B34D6324C84F3 /* QNHex.h in Headers */ = {isa = PBXBuildFile; fileRef = 93CC11645B1146A37AF4907A2E0F9C41 /* QNHex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AAAFF1E6C4E419F0F247B3E0D40B6D6 /* QNDes.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8D45BCF205B2FB126C1CD288D6AF83 /* QNDes.m */; };
+		9C6A409FFCAA1000815CD2A187171645 /* TZImagePickerController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FFC92A533BB46979803E3DC1D4CE9AC /* TZImagePickerController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D938305207E75971D48D47F294E408A /* QNDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F6F7CD3F324FD4A146226E9805A87C3 /* QNDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E7AABE3332A0160398436DD5ED4C7B9 /* QNDnspodEnterprise.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D161342E8944345F7C9A9A33C1A14F /* QNDnspodEnterprise.m */; };
+		9F4DDD276C92E3BC3EF77634598A3001 /* QNRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C1BE626ED6E0146AE316381D1DB6BBA /* QNRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2B7AD593ECF62D9A5D46F567CD25E89 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 85B8CDDB5B44760C7FE32B2578D85129 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3C4F2F747471C9775A6324124F662DA /* NSObject+MJClass.h in Headers */ = {isa = PBXBuildFile; fileRef = C7B573B1F91B5763787A6150ADF000A2 /* NSObject+MJClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A879659EDD89B8414C63D35BD659A90C /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A007B66BEA6A0256B6C6FDDA4EA3E5 /* TZPhotoPreviewController.m */; };
+		A9807E275E870EB6A8ED3F542F6CF209 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 913E2D982B1C3A17F4D8199A0F78D07F /* WMMenuItem.m */; };
+		AAF1C563B7F3C8858FB03CC59B29B091 /* TZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287D298FADF5ADAE24767CCD08130D28 /* TZPhotoPickerController.m */; };
+		AE1B9D11883AB97B4A55DAF22817BFAA /* QNDnspodFree.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6195A4262DF38F1CD19FA9EF1EF100 /* QNDnspodFree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFF837B69E73E3DC5EA631D2F347442A /* TZImageCropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA1BEF4E0DCFDB7B8CC9C888394A37A /* TZImageCropManager.m */; };
+		B21CC8D9528A989583CB2358AA30FD28 /* QNAssessment.h in Headers */ = {isa = PBXBuildFile; fileRef = C52BC9C03113B5D5ABDB18BCA8D32DA9 /* QNAssessment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B36CE25F3524C1ADB9992E496C178C05 /* TZGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7976D5653630432E35681048D2EB00 /* TZGifPhotoPreviewController.m */; };
+		B46D34AD7F125B35CD9A6336321CD543 /* QNIpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B34FAC49376E7900DCF96569BC4F26 /* QNIpModel.m */; };
+		B5701C2CFFDCBFD93949C57A8DFB0FF5 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 81321EEC427B1A68DD724990F86BFAE5 /* MASCompositeConstraint.m */; };
+		B8CB3ACA09C5894D33D51DF1B94703F5 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C11278D5D3BAA5AA0D49394E04A11846 /* MASConstraint.m */; };
+		BCBD579AB2CE2C697155F1308F1F016B /* WMScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B7EEB95984994CD061C7DFE74A60532 /* WMScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCDFDC23F8727A8FD363FCBF864688BC /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 729E83D46BDF9A66C2D4F0B4CA5DEF1A /* WMScrollView.m */; };
+		BE3EFE62E21726E6ECF299EED2782A7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5224A726D9EABB2D5F18E4597390EF3 /* UIKit.framework */; };
+		BFBC769F169F3B208AB14DC5669E7EA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5224A726D9EABB2D5F18E4597390EF3 /* UIKit.framework */; };
+		C38C11A9C7BC65E7F5E07833C5A80D29 /* QNDes.h in Headers */ = {isa = PBXBuildFile; fileRef = CAA0D1BFCEC8BC1E52F7D4249C71C6B5 /* QNDes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C391DDAA9C5F187FD96582900CD58DF9 /* QNDnspodFree.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AD728D59B391C52A973E7438A7620 /* QNDnspodFree.m */; };
+		C4D7726CDA6512A3CF4F305A7CE5E136 /* NSBundle+TZImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF660C410200F8159A7F4FCBA7E621E /* NSBundle+TZImagePicker.m */; };
+		C7875308D7AA002CE77C559B4985FDD6 /* HappyDNS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CE0AB89119D9851E6D9698707FA3F7E /* HappyDNS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8047E08C11D3C461BF1D411CE32E1DF /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B466AF1BFA0B6D516BDD4B9372165554 /* NSObject+MJProperty.m */; };
+		CABE7D3A934CCA46359FC6EB3091268F /* WMPageController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F79A4A59A4FE9B43A7A070F291052E00 /* WMPageController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB97AF0FFCF751B92449BB4FE77573E9 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A4927BBA881803661F3B1B4077DF2556 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBC6F4FE2DEB192CC0221510FC907CD3 /* MJPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = 95C808B1A52474929F2FB8AFFFFDF8DF /* MJPropertyType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC158D56D9CD1153F91D42BBA4684740 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5830D64C2B7A61E525BD2DD85AFC1761 /* NSObject+MJKeyValue.m */; };
+		CCAB65F531163A3EFF8953088FFF958C /* QNLruCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EF791A6A4D50CC6F45899B49337223 /* QNLruCache.m */; };
+		CD03E7090762B49177C16DA89DAE34E8 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = C161043809279EBF9CD7DE68E04FCDE3 /* UIView+Layout.m */; };
+		D19A9D3FE97D8135F59482490656ED43 /* QNIpModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 91723938F650A53CECA77EAA5E3287D6 /* QNIpModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1DE224E4C307D1F0D9B70856F10B1E0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B81086A4B02B8A1BB0F40508A4947E /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		D21417600B24F3C20CB8658893F30868 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE59B0D97841C2542CA3D20540685C26 /* Foundation.framework */; };
+		D528B65765BAF6103131D2EADF876A37 /* HappyDNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 53FDFF907CD9B9A23A9BB6E27548056F /* HappyDNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D64C06F31524E3B78772EBE55F19CB34 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A4D00A449F447F4A886DBCF4F944E2 /* View+MASAdditions.m */; };
+		D68DE6A9337039F82E54FCB1F4D13F63 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A07257CC740D5EDD9246C395421BF6CE /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7764E4FA7D4F0EB7991CD8132177050 /* TZPhotoPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D08C75FC387880FE418331737450E7A /* TZPhotoPreviewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D97E67DFFCF04B7D2C13034896B40EC3 /* MJPropertyKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 671C8BA36488C5D011C74EEC05CCEB7C /* MJPropertyKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA68EDA7F95055E5925C803201409156 /* NSString+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C65353514B8DD6D11B07DFCD6E6395A /* NSString+MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC3294DDD5786756B9AC9A43DAD5DCB1 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A49817C6AE5E5D0377C369B28A2F9F07 /* MASViewConstraint.m */; };
+		DD1A3B046B626595D188B079FB7CEA62 /* QNResolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 98444C2A128B8E278FABDAE984CE5846 /* QNResolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD3A14FB260B55B75E78E7FC5894C596 /* TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A62647AB3B6482A3B1C64C5A27253073 /* TZLocationManager.m */; };
+		DE5F7D0ED16BFD97B40B2320B23D55CC /* QNAssessment.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CA2B395CD8534E07C13E778A04FB73 /* QNAssessment.m */; };
+		DF1E03DCE79E0B7FD921EA34458CB6D7 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D93F5B86116DA95CEB57E3CA45C797F3 /* ViewController+MASAdditions.m */; };
+		E1FBEC6604F8696A193B9298CD9B2822 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C2FAB164496F7AE0B2CEA2BD27353D /* NSString+MJExtension.m */; };
+		E4225A09193008B3887BE5602E9FCAD8 /* QNResolvUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 468252A9DBD6F229BB37EA575E3DBD4B /* QNResolvUtil.m */; };
+		E438E1E21108516EA48D785975F5D99E /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 085D77D17247B5228EB3AE2ADB031770 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E808DBA43070B012A847A57C661B25F0 /* QNRefresher.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B1280F73A6E6E23F52FEACF72FD4D51 /* QNRefresher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E88D3C0E79DF25C110C7AD912ADC2B08 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 085665614F3084D3A0A6B10A40B67F81 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBCEA3CEAB2048348704EA0218D56ACA /* TZPhotoPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = B630048F2239F273D0CE8D44CD79BC0A /* TZPhotoPickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC0DEE720A254ADC4462EF871B0BBEEB /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 765DD2060D58B93788A16505407D84BF /* MJProperty.m */; };
+		EC2F74318795B874286BF73BB74D38C8 /* TZImageCropManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ED494FA4555C8CC460A7A3B32B2FDEC /* TZImageCropManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0588CD057D022A8DBA6961E55D5D068 /* WMMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4BE022B3E56251DB9FF918560328B7 /* WMMenuView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F427F0EABF511326D2387CF77D22FDDE /* TZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED357D1B6016A574D6809EA89863662 /* TZProgressView.m */; };
+		F6FEFC0F5F324A257094A8C6078C83CE /* WMProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B090D83E34B7C1D9951853D3B792DBA /* WMProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8CA5DF4B5964A2BDD90098581134208 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A437AA2CB6118905E9519C7E141B51CA /* NSArray+MASAdditions.m */; };
+		F919BF1835FAC7F3637185444DE5C2B6 /* UIView+Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = F1A8DA5D7796942018877EEAC13CA3C5 /* UIView+Layout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9FC4BC1C440644D97A2AD3DDD817253 /* QNIP.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E59B1815D08ACB62F6E2E8BAF652FE5 /* QNIP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA968E6B5DBE6C4DC2F5C9EFCE72CEEB /* QNHijackingDetectWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 94343BA77FCE1410EDC1701AC8FB1C77 /* QNHijackingDetectWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBC23215F4C0C48D704FBA853F28C5B4 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E69C1EB18AF823C05DFF00AD417C8E29 /* TZImageManager.m */; };
+		FBE3361AAAADBDBF4132B86A6C11D627 /* TZImagePickerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B778DEFDBD1D540B0D7DD1BCAF304245 /* TZImagePickerController-dummy.m */; };
+		FC1CB31F66B0AD385081E1C046BE1248 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A72C60C8604D81E1A7E04AE88F94BB /* TZAssetCell.m */; };
+		FF79CFFF9AC1B2EDE62AAA808EA7FA28 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A786CFFF605584DC641C4DC5CB44D4F5 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFD5F9B5357162D75A24D44E1F3DE931 /* HappyDNS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E12E32355D9205B3DA832F4B768CE97F /* HappyDNS-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F418B764AEBA32CCF718498EC3EE8BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 950897F9978E54E553ED2E4DCE80F621;
+			remoteInfo = HappyDNS;
+		};
+		35F9ED13A83975815DCA61638733F900 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 137BBB7D228F2B023F3BB1F3063A1E41;
+			remoteInfo = Masonry;
+		};
+		51B231FA69F51592FC290C35E6468316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B0C990731BC1B3378029C6B4D224DA5;
+			remoteInfo = WMPageController;
+		};
+		53ED2DF03C507CC751E10651BAC63F1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBC5047425B6C7A694F226483705A0B3;
+			remoteInfo = MJExtension;
+		};
+		D8F52EE686C429814915D9B9DA94FE22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B91BD7510AEF06A4E84366AA6155BB55;
+			remoteInfo = TZImagePickerController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		007E1ED1E39D87107C99868BACAF1D00 /* libspeexdsp.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libspeexdsp.a; path = Pod/Library/lib/libspeexdsp.a; sourceTree = "<group>"; };
+		0190265D2D85103971F3846A842C2F59 /* Pods-FounderReader-2.5-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FounderReader-2.5-resources.sh"; sourceTree = "<group>"; };
+		04DA88880382AAA371C2936BF81F3B11 /* WMPageController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WMPageController.framework; path = WMPageController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		062C35320FEA8FF898E5B9AFD0A1265E /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = umsdk_IOS_analyics_idfa_v4.2.4/UMMobClick.framework; sourceTree = "<group>"; };
+		063F7DBE659CCABEFC836E3270308360 /* HappyDNS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HappyDNS.xcconfig; sourceTree = "<group>"; };
+		085665614F3084D3A0A6B10A40B67F81 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		085D77D17247B5228EB3AE2ADB031770 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		08BF8778725F76118613B91781E0C8A0 /* WMMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WMMenuView.m; path = WMPageController/WMMenuView/WMMenuView.m; sourceTree = "<group>"; };
+		0B7EEB95984994CD061C7DFE74A60532 /* WMScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WMScrollView.h; path = WMPageController/WMMenuView/WMScrollView.h; sourceTree = "<group>"; };
+		0C65353514B8DD6D11B07DFCD6E6395A /* NSString+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MJExtension.h"; path = "MJExtension/NSString+MJExtension.h"; sourceTree = "<group>"; };
+		0CE0AB89119D9851E6D9698707FA3F7E /* HappyDNS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HappyDNS-umbrella.h"; sourceTree = "<group>"; };
+		0D6BB05527891DDEA68A4CB68CBD0B75 /* TZImagePickerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TZImagePickerController.xcconfig; sourceTree = "<group>"; };
+		0DF660C410200F8159A7F4FCBA7E621E /* NSBundle+TZImagePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+TZImagePicker.m"; path = "TZImagePickerController/TZImagePickerController/NSBundle+TZImagePicker.m"; sourceTree = "<group>"; };
+		0EAEEB93509C3DC2A350559796439970 /* libspeex.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libspeex.a; path = Pod/Library/lib/libspeex.a; sourceTree = "<group>"; };
+		12F248EB3AD04CED3D3DBDC8215C30B2 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
+		14278E374871B6D14A055CFAA63D3CF1 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Masonry.modulemap; sourceTree = "<group>"; };
+		161119E1336EBC5A9BBDC79D9236B50E /* QNHex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNHex.m; path = HappyDNS/Util/QNHex.m; sourceTree = "<group>"; };
+		16CDC12B90090E5DDE548A0EB8E3F5A1 /* QNResolverDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNResolverDelegate.h; path = HappyDNS/Common/QNResolverDelegate.h; sourceTree = "<group>"; };
+		185D3114E781E336336E66744E86B296 /* WMPageController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = WMPageController.modulemap; sourceTree = "<group>"; };
+		18FAAD1DF20ABF0D01750A9111FDDAA0 /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZPhotoPreviewCell.h; path = TZImagePickerController/TZImagePickerController/TZPhotoPreviewCell.h; sourceTree = "<group>"; };
+		1A6B220524669DC671B89CDDA0E54BB7 /* QNTxtResolver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNTxtResolver.h; path = HappyDNS/Local/QNTxtResolver.h; sourceTree = "<group>"; };
+		1B2ED463027B79DEC87479DA5F1A69C7 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		1B4173F48603308C6DCBA020BB5F5EF4 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJProperty.h"; path = "MJExtension/NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		1C1BE626ED6E0146AE316381D1DB6BBA /* QNRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNRecord.h; path = HappyDNS/Common/QNRecord.h; sourceTree = "<group>"; };
+		1F34E827A48D126468BF491E76A49465 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2197AC0F1544CC938543D718503EE4D5 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
+		229CFB5D6DF013195FBC4EC1CE3A6C14 /* WMProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WMProgressView.m; path = WMPageController/WMMenuView/WMProgressView.m; sourceTree = "<group>"; };
+		279E7C15B6F10C987375AB5CD7469805 /* HappyDNS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = HappyDNS.modulemap; sourceTree = "<group>"; };
+		287D298FADF5ADAE24767CCD08130D28 /* TZPhotoPickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZPhotoPickerController.m; path = TZImagePickerController/TZImagePickerController/TZPhotoPickerController.m; sourceTree = "<group>"; };
+		2D08C75FC387880FE418331737450E7A /* TZPhotoPreviewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZPhotoPreviewController.h; path = TZImagePickerController/TZImagePickerController/TZPhotoPreviewController.h; sourceTree = "<group>"; };
+		2F10725FE303C14D3F0006FC8168C4D2 /* QNGetAddrInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNGetAddrInfo.m; path = HappyDNS/Util/QNGetAddrInfo.m; sourceTree = "<group>"; };
+		2F6F7CD3F324FD4A146226E9805A87C3 /* QNDomain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNDomain.h; path = HappyDNS/Common/QNDomain.h; sourceTree = "<group>"; };
+		3108B120BC916DD4B4B9116CBF258304 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3300E643384010AE200D30916D3699B8 /* MJPropertyType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyType.m; path = MJExtension/MJPropertyType.m; sourceTree = "<group>"; };
+		358C11EB4321130976AC37BF1A5B309F /* TZImagePickerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZImagePickerController.h; path = TZImagePickerController/TZImagePickerController/TZImagePickerController.h; sourceTree = "<group>"; };
+		36B34FAC49376E7900DCF96569BC4F26 /* QNIpModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNIpModel.m; path = HappyDNS/Assessment/QNIpModel.m; sourceTree = "<group>"; };
+		36D9B2FE53091339E5FC5D2F0754AE26 /* PLPlayerEnv.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PLPlayerEnv.h; path = Pod/Library/include/PLPlayerKit/PLPlayerEnv.h; sourceTree = "<group>"; };
+		3F4D883D5C59B1D2F6A1EB6CE0B400E7 /* MJExtension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-prefix.pch"; sourceTree = "<group>"; };
+		3FA911834B1EA30B7FF22BD14E96C8DB /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
+		3FCA47501C0113B00A2207B4664A8C15 /* QNResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNResolver.m; path = HappyDNS/Local/QNResolver.m; sourceTree = "<group>"; };
+		42537E2DFEFCF5BA916687F9EA96A8FB /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		45FF2F3F96ABDFC92A272E5C7F10ACED /* MJExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJExtension-dummy.m"; sourceTree = "<group>"; };
+		468252A9DBD6F229BB37EA575E3DBD4B /* QNResolvUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNResolvUtil.m; path = HappyDNS/Local/QNResolvUtil.m; sourceTree = "<group>"; };
+		46A007B66BEA6A0256B6C6FDDA4EA3E5 /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZPhotoPreviewController.m; path = TZImagePickerController/TZImagePickerController/TZPhotoPreviewController.m; sourceTree = "<group>"; };
+		48A4D00A449F447F4A886DBCF4F944E2 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		4B090D83E34B7C1D9951853D3B792DBA /* WMProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WMProgressView.h; path = WMPageController/WMMenuView/WMProgressView.h; sourceTree = "<group>"; };
+		4BA1BEF4E0DCFDB7B8CC9C888394A37A /* TZImageCropManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZImageCropManager.m; path = TZImagePickerController/TZImagePickerController/TZImageCropManager.m; sourceTree = "<group>"; };
+		4C4BE022B3E56251DB9FF918560328B7 /* WMMenuView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WMMenuView.h; path = WMPageController/WMMenuView/WMMenuView.h; sourceTree = "<group>"; };
+		4CEC9301B2F4ACAFBCFB8F94BF3D0407 /* WMPageController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WMPageController-dummy.m"; sourceTree = "<group>"; };
+		4E2AA611C7E401F5B6F10BDAB2875BC4 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		4E7192191F2180BE5EE599CF7B07A78B /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
+		4ED494FA4555C8CC460A7A3B32B2FDEC /* TZImageCropManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZImageCropManager.h; path = TZImagePickerController/TZImagePickerController/TZImageCropManager.h; sourceTree = "<group>"; };
+		5310BBCCD37E73536E82E8D1A1B249A6 /* libswresample.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libswresample.a; path = Pod/Library/lib/libswresample.a; sourceTree = "<group>"; };
+		53FDFF907CD9B9A23A9BB6E27548056F /* HappyDNS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HappyDNS.h; path = HappyDNS/HappyDNS.h; sourceTree = "<group>"; };
+		554AD728D59B391C52A973E7438A7620 /* QNDnspodFree.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNDnspodFree.m; path = HappyDNS/Http/QNDnspodFree.m; sourceTree = "<group>"; };
+		55C0B16F626211138BA666323784E274 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56081FDA3950B9ED538F8EC78DBAEF45 /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = MJExtension/MJFoundation.m; sourceTree = "<group>"; };
+		576772F92E10E243BEE5F174A03BC7A1 /* QNHosts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNHosts.h; path = HappyDNS/Local/QNHosts.h; sourceTree = "<group>"; };
+		5830D64C2B7A61E525BD2DD85AFC1761 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJKeyValue.m"; path = "MJExtension/NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		5A0A0A06039C1D6F3FA0272852FB52EF /* TZImagePickerController.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TZImagePickerController.bundle; path = TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle; sourceTree = "<group>"; };
+		5C7DCDCE4E11D6A9478C4FFC30924B4D /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		5FB3DF804E4DACB99D01C0429678A140 /* QNGetAddrInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNGetAddrInfo.h; path = HappyDNS/Util/QNGetAddrInfo.h; sourceTree = "<group>"; };
+		602ACB25D651BBFE8CF51A99BFD26CC6 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
+		633C81EEDB330760C02102697A39880D /* libcrypto.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcrypto.a; path = Pod/Library/lib/libcrypto.a; sourceTree = "<group>"; };
+		63EF791A6A4D50CC6F45899B49337223 /* QNLruCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNLruCache.m; path = HappyDNS/Common/QNLruCache.m; sourceTree = "<group>"; };
+		65AA0100E28AE551A5353C8264D083D1 /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = MJExtension/MJProperty.h; sourceTree = "<group>"; };
+		671C8BA36488C5D011C74EEC05CCEB7C /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
+		68B7F65FEE88B0DEFFBDF2A20D700FF7 /* QNNetworkInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNNetworkInfo.h; path = HappyDNS/Common/QNNetworkInfo.h; sourceTree = "<group>"; };
+		68B81086A4B02B8A1BB0F40508A4947E /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		6B5C10B1A4F0C697DAE5F10B6F6F5BD9 /* Pods-FounderReader-2.5.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FounderReader-2.5.appstore.xcconfig"; sourceTree = "<group>"; };
+		6D7392F147B302ECF83CBF0B3AA1336E /* QNDnsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNDnsManager.m; path = HappyDNS/Common/QNDnsManager.m; sourceTree = "<group>"; };
+		6E59B1815D08ACB62F6E2E8BAF652FE5 /* QNIP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNIP.h; path = HappyDNS/Util/QNIP.h; sourceTree = "<group>"; };
+		6F5D1A929A3F7DAEDC7CC0BA921332ED /* TZVideoPlayerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZVideoPlayerController.h; path = TZImagePickerController/TZImagePickerController/TZVideoPlayerController.h; sourceTree = "<group>"; };
+		70477DC4CA4D1EB8303A0AB79BBF832E /* WMMenuItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WMMenuItem.h; path = WMPageController/WMMenuView/WMMenuItem.h; sourceTree = "<group>"; };
+		70589F303A5789CE634867194AE7C4B2 /* QNDnspodEnterprise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNDnspodEnterprise.h; path = HappyDNS/Http/QNDnspodEnterprise.h; sourceTree = "<group>"; };
+		70EDD53698801F207831308E4B74A3F0 /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = MJExtension/MJFoundation.h; sourceTree = "<group>"; };
+		723EA34682F5071594367209AA198F00 /* NSObject+MJClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJClass.m"; path = "MJExtension/NSObject+MJClass.m"; sourceTree = "<group>"; };
+		729E83D46BDF9A66C2D4F0B4CA5DEF1A /* WMScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WMScrollView.m; path = WMPageController/WMMenuView/WMScrollView.m; sourceTree = "<group>"; };
+		72E0FA77FB83B44E8C0E983D1068D222 /* TZLocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZLocationManager.h; path = TZImagePickerController/TZImagePickerController/TZLocationManager.h; sourceTree = "<group>"; };
+		765DD2060D58B93788A16505407D84BF /* MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJProperty.m; path = MJExtension/MJProperty.m; sourceTree = "<group>"; };
+		76C3525BEFED8EA4C56BB2C79ECB5043 /* Pods-FounderReader-2.5-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FounderReader-2.5-umbrella.h"; sourceTree = "<group>"; };
+		7744A73D5300491790B1ED3243F2E1CD /* QNLruCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNLruCache.h; path = HappyDNS/Common/QNLruCache.h; sourceTree = "<group>"; };
+		77928FE88C4B4454EDF529BB75E7BFCF /* TZImagePickerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TZImagePickerController-prefix.pch"; sourceTree = "<group>"; };
+		7814106D68297A58919072012348C5B2 /* TZProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZProgressView.h; path = TZImagePickerController/TZImagePickerController/TZProgressView.h; sourceTree = "<group>"; };
+		78404924EAAD91C0578867AEB229C753 /* Pods-FounderReader-2.5-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FounderReader-2.5-frameworks.sh"; sourceTree = "<group>"; };
+		7AF926F54062EEC17A4FD0DC80690DA5 /* WMPageController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WMPageController.h; path = WMPageController/WMPageController.h; sourceTree = "<group>"; };
+		7D5F72BCCACD0983C2440EB9ADAE4892 /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJExtension.framework; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E7976D5653630432E35681048D2EB00 /* TZGifPhotoPreviewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZGifPhotoPreviewController.m; path = TZImagePickerController/TZImagePickerController/TZGifPhotoPreviewController.m; sourceTree = "<group>"; };
+		81321EEC427B1A68DD724990F86BFAE5 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
+		85B8CDDB5B44760C7FE32B2578D85129 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		85CAFA2F4C61AD55F29A893AF31FD84F /* MJExtension.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJExtension.xcconfig; sourceTree = "<group>"; };
+		85FB3242658CDACE2A5914696D1A7650 /* HappyDNS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HappyDNS-prefix.pch"; sourceTree = "<group>"; };
+		86A72C60C8604D81E1A7E04AE88F94BB /* TZAssetCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZAssetCell.m; path = TZImagePickerController/TZImagePickerController/TZAssetCell.m; sourceTree = "<group>"; };
+		88DE40EEE19B41831FAFE508FC2CAE23 /* libavutil.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libavutil.a; path = Pod/Library/lib/libavutil.a; sourceTree = "<group>"; };
+		890F897F9F1E3F7AFF58EFFA16E4F79E /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = MJExtension/MJExtension.h; sourceTree = "<group>"; };
+		8A647A8A67B3E39D64591B1D7217071B /* libavcodec.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libavcodec.a; path = Pod/Library/lib/libavcodec.a; sourceTree = "<group>"; };
+		8B1280F73A6E6E23F52FEACF72FD4D51 /* QNRefresher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNRefresher.h; path = HappyDNS/QNRefresher.h; sourceTree = "<group>"; };
+		8B4D39409F11E9655A0CDF3677543BBF /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		8D095822232FD42C491F52B6EA4C8A00 /* QNRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNRecord.m; path = HappyDNS/Common/QNRecord.m; sourceTree = "<group>"; };
+		8FFC92A533BB46979803E3DC1D4CE9AC /* TZImagePickerController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TZImagePickerController-umbrella.h"; sourceTree = "<group>"; };
+		913E2D982B1C3A17F4D8199A0F78D07F /* WMMenuItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WMMenuItem.m; path = WMPageController/WMMenuView/WMMenuItem.m; sourceTree = "<group>"; };
+		91723938F650A53CECA77EAA5E3287D6 /* QNIpModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNIpModel.h; path = HappyDNS/Assessment/QNIpModel.h; sourceTree = "<group>"; };
+		934D3F631593EF7427CA43BEC2DBFA1E /* MJExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MJExtension.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93CC11645B1146A37AF4907A2E0F9C41 /* QNHex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNHex.h; path = HappyDNS/Util/QNHex.h; sourceTree = "<group>"; };
+		94343BA77FCE1410EDC1701AC8FB1C77 /* QNHijackingDetectWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNHijackingDetectWrapper.h; path = HappyDNS/Local/QNHijackingDetectWrapper.h; sourceTree = "<group>"; };
+		95C808B1A52474929F2FB8AFFFFDF8DF /* MJPropertyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyType.h; path = MJExtension/MJPropertyType.h; sourceTree = "<group>"; };
+		98444C2A128B8E278FABDAE984CE5846 /* QNResolver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNResolver.h; path = HappyDNS/Local/QNResolver.h; sourceTree = "<group>"; };
+		99C06B1B209CA23EC16EBF65CF890313 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		9A42BE7FEC0170E99C05DAEA07653D8E /* WMPageController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WMPageController.m; path = WMPageController/WMPageController.m; sourceTree = "<group>"; };
+		9ADF2F5C782B2C105323A6B338E7C7E8 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
+		9B66ED801406E477EB8AE65412279B85 /* TZVideoPlayerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZVideoPlayerController.m; path = TZImagePickerController/TZImagePickerController/TZVideoPlayerController.m; sourceTree = "<group>"; };
+		9D03071363CBE68D9EDD44F269CA8DF6 /* TZImagePickerController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TZImagePickerController.modulemap; sourceTree = "<group>"; };
+		9E50FFFE66133403372A4B1932715654 /* QNHijackingDetectWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNHijackingDetectWrapper.m; path = HappyDNS/Local/QNHijackingDetectWrapper.m; sourceTree = "<group>"; };
+		9E5372864E154C5BB6F959E74FFD3B96 /* QNRefresher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNRefresher.m; path = HappyDNS/QNRefresher.m; sourceTree = "<group>"; };
+		9ED357D1B6016A574D6809EA89863662 /* TZProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZProgressView.m; path = TZImagePickerController/TZImagePickerController/TZProgressView.m; sourceTree = "<group>"; };
+		9F630CD6738E70CCE9DAD49F4E1D41E6 /* libssl.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libssl.a; path = Pod/Library/lib/libssl.a; sourceTree = "<group>"; };
+		A07257CC740D5EDD9246C395421BF6CE /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
+		A23BCB2173B783C0CD3048C7CA5BF78E /* TZAssetCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZAssetCell.h; path = TZImagePickerController/TZImagePickerController/TZAssetCell.h; sourceTree = "<group>"; };
+		A3435A8942BB959C3952C64D3D291DA6 /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
+		A437AA2CB6118905E9519C7E141B51CA /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		A48069DFA548D8AABAA748B037AC8B7D /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZPhotoPreviewCell.m; path = TZImagePickerController/TZImagePickerController/TZPhotoPreviewCell.m; sourceTree = "<group>"; };
+		A4927BBA881803661F3B1B4077DF2556 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		A49817C6AE5E5D0377C369B28A2F9F07 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		A5224A726D9EABB2D5F18E4597390EF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		A5A6B4D54F250A747F0D3AB116694FAD /* HappyDNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HappyDNS.framework; path = HappyDNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C9C947C987629742FBED14A12CC3AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A60A7E121838512034855E6F5AF2C381 /* libavformat.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libavformat.a; path = Pod/Library/lib/libavformat.a; sourceTree = "<group>"; };
+		A62647AB3B6482A3B1C64C5A27253073 /* TZLocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZLocationManager.m; path = TZImagePickerController/TZImagePickerController/TZLocationManager.m; sourceTree = "<group>"; };
+		A786CFFF605584DC641C4DC5CB44D4F5 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		AB4945606A941E888EF6FD71E63A0104 /* WMPageController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WMPageController-prefix.pch"; sourceTree = "<group>"; };
+		B01DFC0DE999924E5AD6FDDDC80CA08C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B160E9C45C207A2363AA52629009144D /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		B3C2FAB164496F7AE0B2CEA2BD27353D /* NSString+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MJExtension.m"; path = "MJExtension/NSString+MJExtension.m"; sourceTree = "<group>"; };
+		B466AF1BFA0B6D516BDD4B9372165554 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJProperty.m"; path = "MJExtension/NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		B630048F2239F273D0CE8D44CD79BC0A /* TZPhotoPickerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZPhotoPickerController.h; path = TZImagePickerController/TZImagePickerController/TZPhotoPickerController.h; sourceTree = "<group>"; };
+		B7722C56B244B74BEFC70942A0581D7A /* TZImagePickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TZImagePickerController.framework; path = TZImagePickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B778DEFDBD1D540B0D7DD1BCAF304245 /* TZImagePickerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TZImagePickerController-dummy.m"; sourceTree = "<group>"; };
+		B8BD8C7A6000EC0DD1DB351E51BD7704 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBB343D6C1E7D2A4A8EC72B85A4E1D82 /* Pods-FounderReader-2.5-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FounderReader-2.5-acknowledgements.plist"; sourceTree = "<group>"; };
+		BC8ACAB77B7C8D0B42304E10F502FD12 /* PLPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PLPlayer.h; path = Pod/Library/include/PLPlayerKit/PLPlayer.h; sourceTree = "<group>"; };
+		BCD70EE988B2A4D9DB04C8C0C36A5D68 /* Pods-FounderReader-2.5-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FounderReader-2.5-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BDA6514063A7509BBBB4325BE183219B /* QNResolvUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNResolvUtil.h; path = HappyDNS/Local/QNResolvUtil.h; sourceTree = "<group>"; };
+		BDD4614922AC30E17421D41CD2C17A32 /* QNDnsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNDnsManager.h; path = HappyDNS/Common/QNDnsManager.h; sourceTree = "<group>"; };
+		BEF50C8668F5F39356872D39C8509B83 /* TZImagePickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZImagePickerController.m; path = TZImagePickerController/TZImagePickerController/TZImagePickerController.m; sourceTree = "<group>"; };
+		BF8D45BCF205B2FB126C1CD288D6AF83 /* QNDes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNDes.m; path = HappyDNS/Util/QNDes.m; sourceTree = "<group>"; };
+		C11278D5D3BAA5AA0D49394E04A11846 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		C161043809279EBF9CD7DE68E04FCDE3 /* UIView+Layout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Layout.m"; path = "TZImagePickerController/TZImagePickerController/UIView+Layout.m"; sourceTree = "<group>"; };
+		C52BC9C03113B5D5ABDB18BCA8D32DA9 /* QNAssessment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNAssessment.h; path = HappyDNS/Assessment/QNAssessment.h; sourceTree = "<group>"; };
+		C6114ECEA10FDB4D6D7CEF0AC39BDE9E /* Pods-FounderReader-2.5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FounderReader-2.5.debug.xcconfig"; sourceTree = "<group>"; };
+		C7B573B1F91B5763787A6150ADF000A2 /* NSObject+MJClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJClass.h"; path = "MJExtension/NSObject+MJClass.h"; sourceTree = "<group>"; };
+		C9CA2B395CD8534E07C13E778A04FB73 /* QNAssessment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNAssessment.m; path = HappyDNS/Assessment/QNAssessment.m; sourceTree = "<group>"; };
+		CA1F933F3364A7355CF63EDC5C2B8508 /* MJExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-umbrella.h"; sourceTree = "<group>"; };
+		CAA0D1BFCEC8BC1E52F7D4249C71C6B5 /* QNDes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNDes.h; path = HappyDNS/Util/QNDes.h; sourceTree = "<group>"; };
+		CE59B0D97841C2542CA3D20540685C26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D0FA4C6FC24F12CA22B15E0B926DB623 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D15858C095F02C1D4742F54EBC1F33C4 /* QNNetworkInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNNetworkInfo.m; path = HappyDNS/Common/QNNetworkInfo.m; sourceTree = "<group>"; };
+		D1B2E70FAC7CE63A019842358F566B98 /* Pods-FounderReader-2.5.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FounderReader-2.5.modulemap"; sourceTree = "<group>"; };
+		D252B56529ED414F9164A72050906B8A /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJKeyValue.h"; path = "MJExtension/NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		D27DA13B21F791A29609E0EB4EA101D9 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		D41A6A446CEB5F4628EE82EC114F8228 /* TZAssetModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZAssetModel.h; path = TZImagePickerController/TZImagePickerController/TZAssetModel.h; sourceTree = "<group>"; };
+		D71DFCA03509F5BB9C1469917778CAE9 /* TZGifPhotoPreviewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZGifPhotoPreviewController.h; path = TZImagePickerController/TZImagePickerController/TZGifPhotoPreviewController.h; sourceTree = "<group>"; };
+		D75D6333D16D64284ADC9E3F2FDC39BB /* Pods-FounderReader-2.5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FounderReader-2.5.release.xcconfig"; sourceTree = "<group>"; };
+		D8C8FD002AECCB007898EBA112C1FE52 /* PLPlayerError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PLPlayerError.h; path = Pod/Library/include/PLPlayerKit/PLPlayerError.h; sourceTree = "<group>"; };
+		D93F5B86116DA95CEB57E3CA45C797F3 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		DAB356701C77DDD3183F66AE77BC8D64 /* libPLPlayerKit.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libPLPlayerKit.a; path = Pod/Library/lib/libPLPlayerKit.a; sourceTree = "<group>"; };
+		DBF1E1082C3C674B38217ED066AABE01 /* PLPlayerKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PLPlayerKit.h; path = Pod/Library/include/PLPlayerKit/PLPlayerKit.h; sourceTree = "<group>"; };
+		DEA02C23142F7BB4D5CAB2876040C2D8 /* MJPropertyKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyKey.m; path = MJExtension/MJPropertyKey.m; sourceTree = "<group>"; };
+		E112B24D32F62F3553F03D0D63A8B671 /* Pods_FounderReader_2_5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FounderReader_2_5.framework; path = "Pods-FounderReader-2.5.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12E32355D9205B3DA832F4B768CE97F /* HappyDNS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HappyDNS-dummy.m"; sourceTree = "<group>"; };
+		E17DB55EE5DDA0BE7F73A27DE9C83684 /* QNHosts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNHosts.m; path = HappyDNS/Local/QNHosts.m; sourceTree = "<group>"; };
+		E61B0E71D843403B8FA22EC92F95D769 /* Pods-FounderReader-2.5-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FounderReader-2.5-dummy.m"; sourceTree = "<group>"; };
+		E69C1EB18AF823C05DFF00AD417C8E29 /* TZImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZImageManager.m; path = TZImagePickerController/TZImagePickerController/TZImageManager.m; sourceTree = "<group>"; };
+		E8BD07E2D47EB0E446E2D41632A0E430 /* WMPageController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WMPageController.xcconfig; sourceTree = "<group>"; };
+		E9E5352E222D0E23BC52454E953CEB4A /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		EC6803B860D0E613971FAA48FA6F6781 /* Pods-FounderReader-2.5.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FounderReader-2.5.enterprise.xcconfig"; sourceTree = "<group>"; };
+		EE4DB656522A428B9966D0F9435EAA5D /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		F0D161342E8944345F7C9A9A33C1A14F /* QNDnspodEnterprise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNDnspodEnterprise.m; path = HappyDNS/Http/QNDnspodEnterprise.m; sourceTree = "<group>"; };
+		F0EC7AE371D76C3AEB5C356D76F11524 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
+		F1A816CA41F1000A48437AEE706FD25C /* QNIP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNIP.m; path = HappyDNS/Util/QNIP.m; sourceTree = "<group>"; };
+		F1A8DA5D7796942018877EEAC13CA3C5 /* UIView+Layout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Layout.h"; path = "TZImagePickerController/TZImagePickerController/UIView+Layout.h"; sourceTree = "<group>"; };
+		F1CA643551817A635E8D640033ECD1F7 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		F29D51B42CC0E52FEF9299E6185096EE /* NSObject+MJCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJCoding.m"; path = "MJExtension/NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		F44920039426B9DB7588387C15140DD0 /* NSBundle+TZImagePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+TZImagePicker.h"; path = "TZImagePickerController/TZImagePickerController/NSBundle+TZImagePicker.h"; sourceTree = "<group>"; };
+		F457388B5F8AC23D3F4F728E6ACBB9AF /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
+		F7917EE11D89A0985782369E2EBC4E87 /* QNDomain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNDomain.m; path = HappyDNS/Common/QNDomain.m; sourceTree = "<group>"; };
+		F79A4A59A4FE9B43A7A070F291052E00 /* WMPageController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WMPageController-umbrella.h"; sourceTree = "<group>"; };
+		F992BF9E6BC62BD170E9A6DA69882055 /* PLPlayerOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PLPlayerOption.h; path = Pod/Library/include/PLPlayerKit/PLPlayerOption.h; sourceTree = "<group>"; };
+		FADDF6CD08B8BCCFE70B16420D8A7C48 /* QNTxtResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNTxtResolver.m; path = HappyDNS/Local/QNTxtResolver.m; sourceTree = "<group>"; };
+		FCC0DF1EE963AED007D7C4E7E4CB5ACD /* TZAssetModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZAssetModel.m; path = TZImagePickerController/TZImagePickerController/TZAssetModel.m; sourceTree = "<group>"; };
+		FE6195A4262DF38F1CD19FA9EF1EF100 /* QNDnspodFree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNDnspodFree.h; path = HappyDNS/Http/QNDnspodFree.h; sourceTree = "<group>"; };
+		FEBE97DA940BEB1BD3F64C4AD4CF7A84 /* TZImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZImageManager.h; path = TZImagePickerController/TZImagePickerController/TZImageManager.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47AE7865E5CFD4D12EF3926AB785529F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D21417600B24F3C20CB8658893F30868 /* Foundation.framework in Frameworks */,
+				BFBC769F169F3B208AB14DC5669E7EA1 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AAA3538D4BB3E33E59D7122772F70F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4031144C90BA5FC5C32695333038F5DF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		669EDF0EB5A9A96F20F498E0DAB7F255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13E47AD710B59CB935228BD09384106D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		912D8B5D3F8E7F7D22DA4A00FFF43802 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05578FF7A744805AF2F8CF0281D9DCD0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4061E3D2C2327F86C559E52E4F51471 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592330DE808B7F390A2EC6D3A1E58138 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C80A020354459FAFB11615C14592F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35B8A9743EADAA8F25F3D27F7937249C /* CoreGraphics.framework in Frameworks */,
+				222723C0928E93B6D6BD89D7D81BD361 /* Foundation.framework in Frameworks */,
+				BE3EFE62E21726E6ECF299EED2782A7C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07077F264E071144805FF09A36E06950 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5C9C947C987629742FBED14A12CC3AE /* Info.plist */,
+				934D3F631593EF7427CA43BEC2DBFA1E /* MJExtension.modulemap */,
+				85CAFA2F4C61AD55F29A893AF31FD84F /* MJExtension.xcconfig */,
+				45FF2F3F96ABDFC92A272E5C7F10ACED /* MJExtension-dummy.m */,
+				3F4D883D5C59B1D2F6A1EB6CE0B400E7 /* MJExtension-prefix.pch */,
+				CA1F933F3364A7355CF63EDC5C2B8508 /* MJExtension-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MJExtension";
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93FD095B5FC2A2BCC81B8E3CFC167E67 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16A26DABCFAE68796960257FED083C33 /* WMPageController */ = {
+			isa = PBXGroup;
+			children = (
+				70477DC4CA4D1EB8303A0AB79BBF832E /* WMMenuItem.h */,
+				913E2D982B1C3A17F4D8199A0F78D07F /* WMMenuItem.m */,
+				4C4BE022B3E56251DB9FF918560328B7 /* WMMenuView.h */,
+				08BF8778725F76118613B91781E0C8A0 /* WMMenuView.m */,
+				7AF926F54062EEC17A4FD0DC80690DA5 /* WMPageController.h */,
+				9A42BE7FEC0170E99C05DAEA07653D8E /* WMPageController.m */,
+				4B090D83E34B7C1D9951853D3B792DBA /* WMProgressView.h */,
+				229CFB5D6DF013195FBC4EC1CE3A6C14 /* WMProgressView.m */,
+				0B7EEB95984994CD061C7DFE74A60532 /* WMScrollView.h */,
+				729E83D46BDF9A66C2D4F0B4CA5DEF1A /* WMScrollView.m */,
+				1B628431ED23D8EFDC68D5128C9C15F0 /* Support Files */,
+			);
+			name = WMPageController;
+			path = WMPageController;
+			sourceTree = "<group>";
+		};
+		1B628431ED23D8EFDC68D5128C9C15F0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8BD8C7A6000EC0DD1DB351E51BD7704 /* Info.plist */,
+				185D3114E781E336336E66744E86B296 /* WMPageController.modulemap */,
+				E8BD07E2D47EB0E446E2D41632A0E430 /* WMPageController.xcconfig */,
+				4CEC9301B2F4ACAFBCFB8F94BF3D0407 /* WMPageController-dummy.m */,
+				AB4945606A941E888EF6FD71E63A0104 /* WMPageController-prefix.pch */,
+				F79A4A59A4FE9B43A7A070F291052E00 /* WMPageController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/WMPageController";
+			sourceTree = "<group>";
+		};
+		3624CB36B638DA6AC1DCFD977DA99A5E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3108B120BC916DD4B4B9116CBF258304 /* Info.plist */,
+				14278E374871B6D14A055CFAA63D3CF1 /* Masonry.modulemap */,
+				F457388B5F8AC23D3F4F728E6ACBB9AF /* Masonry.xcconfig */,
+				E9E5352E222D0E23BC52454E953CEB4A /* Masonry-dummy.m */,
+				9ADF2F5C782B2C105323A6B338E7C7E8 /* Masonry-prefix.pch */,
+				A07257CC740D5EDD9246C395421BF6CE /* Masonry-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Masonry";
+			sourceTree = "<group>";
+		};
+		4BB18696157E12EAD41E79BC0B7FA5C4 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				890F897F9F1E3F7AFF58EFFA16E4F79E /* MJExtension.h */,
+				A3435A8942BB959C3952C64D3D291DA6 /* MJExtensionConst.h */,
+				3FA911834B1EA30B7FF22BD14E96C8DB /* MJExtensionConst.m */,
+				70EDD53698801F207831308E4B74A3F0 /* MJFoundation.h */,
+				56081FDA3950B9ED538F8EC78DBAEF45 /* MJFoundation.m */,
+				65AA0100E28AE551A5353C8264D083D1 /* MJProperty.h */,
+				765DD2060D58B93788A16505407D84BF /* MJProperty.m */,
+				671C8BA36488C5D011C74EEC05CCEB7C /* MJPropertyKey.h */,
+				DEA02C23142F7BB4D5CAB2876040C2D8 /* MJPropertyKey.m */,
+				95C808B1A52474929F2FB8AFFFFDF8DF /* MJPropertyType.h */,
+				3300E643384010AE200D30916D3699B8 /* MJPropertyType.m */,
+				C7B573B1F91B5763787A6150ADF000A2 /* NSObject+MJClass.h */,
+				723EA34682F5071594367209AA198F00 /* NSObject+MJClass.m */,
+				5C7DCDCE4E11D6A9478C4FFC30924B4D /* NSObject+MJCoding.h */,
+				F29D51B42CC0E52FEF9299E6185096EE /* NSObject+MJCoding.m */,
+				D252B56529ED414F9164A72050906B8A /* NSObject+MJKeyValue.h */,
+				5830D64C2B7A61E525BD2DD85AFC1761 /* NSObject+MJKeyValue.m */,
+				1B4173F48603308C6DCBA020BB5F5EF4 /* NSObject+MJProperty.h */,
+				B466AF1BFA0B6D516BDD4B9372165554 /* NSObject+MJProperty.m */,
+				0C65353514B8DD6D11B07DFCD6E6395A /* NSString+MJExtension.h */,
+				B3C2FAB164496F7AE0B2CEA2BD27353D /* NSString+MJExtension.m */,
+				07077F264E071144805FF09A36E06950 /* Support Files */,
+			);
+			name = MJExtension;
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		56574C0592221340524C2C2CB17AC20D /* UMengAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				C5BF2738BB9F89E7EFC5FB946E72842D /* Frameworks */,
+			);
+			name = UMengAnalytics;
+			path = UMengAnalytics;
+			sourceTree = "<group>";
+		};
+		697A6476DE33CD526342F135D06DB08E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5A0A0A06039C1D6F3FA0272852FB52EF /* TZImagePickerController.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				8E649EDEBD98C5D41EE77A218199537F /* Pods */,
+				E3E85828078825B2BF5F2CA706897A70 /* Products */,
+				F51F4CAD599589E1A173A0322DF31009 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		84D3FE88C9016FC5D5DD609A21146B0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A647A8A67B3E39D64591B1D7217071B /* libavcodec.a */,
+				A60A7E121838512034855E6F5AF2C381 /* libavformat.a */,
+				88DE40EEE19B41831FAFE508FC2CAE23 /* libavutil.a */,
+				633C81EEDB330760C02102697A39880D /* libcrypto.a */,
+				DAB356701C77DDD3183F66AE77BC8D64 /* libPLPlayerKit.a */,
+				0EAEEB93509C3DC2A350559796439970 /* libspeex.a */,
+				007E1ED1E39D87107C99868BACAF1D00 /* libspeexdsp.a */,
+				9F630CD6738E70CCE9DAD49F4E1D41E6 /* libssl.a */,
+				5310BBCCD37E73536E82E8D1A1B249A6 /* libswresample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E649EDEBD98C5D41EE77A218199537F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BD3EF9C7E438083E3E6E919B254BFC0 /* HappyDNS */,
+				A038D78524F94716BFE1A178E91A7455 /* Masonry */,
+				4BB18696157E12EAD41E79BC0B7FA5C4 /* MJExtension */,
+				E571090FB9D544D4F1C76E161B4EEB9B /* PLPlayerKit */,
+				B0994F26FAE77420A87ED6072A4AB6EA /* TZImagePickerController */,
+				56574C0592221340524C2C2CB17AC20D /* UMengAnalytics */,
+				16A26DABCFAE68796960257FED083C33 /* WMPageController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		93FD095B5FC2A2BCC81B8E3CFC167E67 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				99C06B1B209CA23EC16EBF65CF890313 /* CoreGraphics.framework */,
+				CE59B0D97841C2542CA3D20540685C26 /* Foundation.framework */,
+				A5224A726D9EABB2D5F18E4597390EF3 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9BD3EF9C7E438083E3E6E919B254BFC0 /* HappyDNS */ = {
+			isa = PBXGroup;
+			children = (
+				53FDFF907CD9B9A23A9BB6E27548056F /* HappyDNS.h */,
+				C52BC9C03113B5D5ABDB18BCA8D32DA9 /* QNAssessment.h */,
+				C9CA2B395CD8534E07C13E778A04FB73 /* QNAssessment.m */,
+				CAA0D1BFCEC8BC1E52F7D4249C71C6B5 /* QNDes.h */,
+				BF8D45BCF205B2FB126C1CD288D6AF83 /* QNDes.m */,
+				BDD4614922AC30E17421D41CD2C17A32 /* QNDnsManager.h */,
+				6D7392F147B302ECF83CBF0B3AA1336E /* QNDnsManager.m */,
+				70589F303A5789CE634867194AE7C4B2 /* QNDnspodEnterprise.h */,
+				F0D161342E8944345F7C9A9A33C1A14F /* QNDnspodEnterprise.m */,
+				FE6195A4262DF38F1CD19FA9EF1EF100 /* QNDnspodFree.h */,
+				554AD728D59B391C52A973E7438A7620 /* QNDnspodFree.m */,
+				2F6F7CD3F324FD4A146226E9805A87C3 /* QNDomain.h */,
+				F7917EE11D89A0985782369E2EBC4E87 /* QNDomain.m */,
+				5FB3DF804E4DACB99D01C0429678A140 /* QNGetAddrInfo.h */,
+				2F10725FE303C14D3F0006FC8168C4D2 /* QNGetAddrInfo.m */,
+				93CC11645B1146A37AF4907A2E0F9C41 /* QNHex.h */,
+				161119E1336EBC5A9BBDC79D9236B50E /* QNHex.m */,
+				94343BA77FCE1410EDC1701AC8FB1C77 /* QNHijackingDetectWrapper.h */,
+				9E50FFFE66133403372A4B1932715654 /* QNHijackingDetectWrapper.m */,
+				576772F92E10E243BEE5F174A03BC7A1 /* QNHosts.h */,
+				E17DB55EE5DDA0BE7F73A27DE9C83684 /* QNHosts.m */,
+				6E59B1815D08ACB62F6E2E8BAF652FE5 /* QNIP.h */,
+				F1A816CA41F1000A48437AEE706FD25C /* QNIP.m */,
+				91723938F650A53CECA77EAA5E3287D6 /* QNIpModel.h */,
+				36B34FAC49376E7900DCF96569BC4F26 /* QNIpModel.m */,
+				7744A73D5300491790B1ED3243F2E1CD /* QNLruCache.h */,
+				63EF791A6A4D50CC6F45899B49337223 /* QNLruCache.m */,
+				68B7F65FEE88B0DEFFBDF2A20D700FF7 /* QNNetworkInfo.h */,
+				D15858C095F02C1D4742F54EBC1F33C4 /* QNNetworkInfo.m */,
+				1C1BE626ED6E0146AE316381D1DB6BBA /* QNRecord.h */,
+				8D095822232FD42C491F52B6EA4C8A00 /* QNRecord.m */,
+				8B1280F73A6E6E23F52FEACF72FD4D51 /* QNRefresher.h */,
+				9E5372864E154C5BB6F959E74FFD3B96 /* QNRefresher.m */,
+				98444C2A128B8E278FABDAE984CE5846 /* QNResolver.h */,
+				3FCA47501C0113B00A2207B4664A8C15 /* QNResolver.m */,
+				16CDC12B90090E5DDE548A0EB8E3F5A1 /* QNResolverDelegate.h */,
+				BDA6514063A7509BBBB4325BE183219B /* QNResolvUtil.h */,
+				468252A9DBD6F229BB37EA575E3DBD4B /* QNResolvUtil.m */,
+				1A6B220524669DC671B89CDDA0E54BB7 /* QNTxtResolver.h */,
+				FADDF6CD08B8BCCFE70B16420D8A7C48 /* QNTxtResolver.m */,
+				BDA97A44CF1C79F8BFF5CB6BBB8F57AD /* Support Files */,
+			);
+			name = HappyDNS;
+			path = HappyDNS;
+			sourceTree = "<group>";
+		};
+		A038D78524F94716BFE1A178E91A7455 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				85B8CDDB5B44760C7FE32B2578D85129 /* MASCompositeConstraint.h */,
+				81321EEC427B1A68DD724990F86BFAE5 /* MASCompositeConstraint.m */,
+				085665614F3084D3A0A6B10A40B67F81 /* MASConstraint.h */,
+				C11278D5D3BAA5AA0D49394E04A11846 /* MASConstraint.m */,
+				A786CFFF605584DC641C4DC5CB44D4F5 /* MASConstraint+Private.h */,
+				F0EC7AE371D76C3AEB5C356D76F11524 /* MASConstraintMaker.h */,
+				EE4DB656522A428B9966D0F9435EAA5D /* MASConstraintMaker.m */,
+				D27DA13B21F791A29609E0EB4EA101D9 /* MASLayoutConstraint.h */,
+				12F248EB3AD04CED3D3DBDC8215C30B2 /* MASLayoutConstraint.m */,
+				602ACB25D651BBFE8CF51A99BFD26CC6 /* Masonry.h */,
+				1B2ED463027B79DEC87479DA5F1A69C7 /* MASUtilities.h */,
+				2197AC0F1544CC938543D718503EE4D5 /* MASViewAttribute.h */,
+				F1CA643551817A635E8D640033ECD1F7 /* MASViewAttribute.m */,
+				4E7192191F2180BE5EE599CF7B07A78B /* MASViewConstraint.h */,
+				A49817C6AE5E5D0377C369B28A2F9F07 /* MASViewConstraint.m */,
+				4E2AA611C7E401F5B6F10BDAB2875BC4 /* NSArray+MASAdditions.h */,
+				A437AA2CB6118905E9519C7E141B51CA /* NSArray+MASAdditions.m */,
+				B160E9C45C207A2363AA52629009144D /* NSArray+MASShorthandAdditions.h */,
+				A4927BBA881803661F3B1B4077DF2556 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				68B81086A4B02B8A1BB0F40508A4947E /* NSLayoutConstraint+MASDebugAdditions.m */,
+				8B4D39409F11E9655A0CDF3677543BBF /* View+MASAdditions.h */,
+				48A4D00A449F447F4A886DBCF4F944E2 /* View+MASAdditions.m */,
+				42537E2DFEFCF5BA916687F9EA96A8FB /* View+MASShorthandAdditions.h */,
+				085D77D17247B5228EB3AE2ADB031770 /* ViewController+MASAdditions.h */,
+				D93F5B86116DA95CEB57E3CA45C797F3 /* ViewController+MASAdditions.m */,
+				3624CB36B638DA6AC1DCFD977DA99A5E /* Support Files */,
+			);
+			name = Masonry;
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		B0994F26FAE77420A87ED6072A4AB6EA /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				F44920039426B9DB7588387C15140DD0 /* NSBundle+TZImagePicker.h */,
+				0DF660C410200F8159A7F4FCBA7E621E /* NSBundle+TZImagePicker.m */,
+				A23BCB2173B783C0CD3048C7CA5BF78E /* TZAssetCell.h */,
+				86A72C60C8604D81E1A7E04AE88F94BB /* TZAssetCell.m */,
+				D41A6A446CEB5F4628EE82EC114F8228 /* TZAssetModel.h */,
+				FCC0DF1EE963AED007D7C4E7E4CB5ACD /* TZAssetModel.m */,
+				D71DFCA03509F5BB9C1469917778CAE9 /* TZGifPhotoPreviewController.h */,
+				7E7976D5653630432E35681048D2EB00 /* TZGifPhotoPreviewController.m */,
+				4ED494FA4555C8CC460A7A3B32B2FDEC /* TZImageCropManager.h */,
+				4BA1BEF4E0DCFDB7B8CC9C888394A37A /* TZImageCropManager.m */,
+				FEBE97DA940BEB1BD3F64C4AD4CF7A84 /* TZImageManager.h */,
+				E69C1EB18AF823C05DFF00AD417C8E29 /* TZImageManager.m */,
+				358C11EB4321130976AC37BF1A5B309F /* TZImagePickerController.h */,
+				BEF50C8668F5F39356872D39C8509B83 /* TZImagePickerController.m */,
+				72E0FA77FB83B44E8C0E983D1068D222 /* TZLocationManager.h */,
+				A62647AB3B6482A3B1C64C5A27253073 /* TZLocationManager.m */,
+				B630048F2239F273D0CE8D44CD79BC0A /* TZPhotoPickerController.h */,
+				287D298FADF5ADAE24767CCD08130D28 /* TZPhotoPickerController.m */,
+				18FAAD1DF20ABF0D01750A9111FDDAA0 /* TZPhotoPreviewCell.h */,
+				A48069DFA548D8AABAA748B037AC8B7D /* TZPhotoPreviewCell.m */,
+				2D08C75FC387880FE418331737450E7A /* TZPhotoPreviewController.h */,
+				46A007B66BEA6A0256B6C6FDDA4EA3E5 /* TZPhotoPreviewController.m */,
+				7814106D68297A58919072012348C5B2 /* TZProgressView.h */,
+				9ED357D1B6016A574D6809EA89863662 /* TZProgressView.m */,
+				6F5D1A929A3F7DAEDC7CC0BA921332ED /* TZVideoPlayerController.h */,
+				9B66ED801406E477EB8AE65412279B85 /* TZVideoPlayerController.m */,
+				F1A8DA5D7796942018877EEAC13CA3C5 /* UIView+Layout.h */,
+				C161043809279EBF9CD7DE68E04FCDE3 /* UIView+Layout.m */,
+				697A6476DE33CD526342F135D06DB08E /* Resources */,
+				EDFA01AF6D688FD33F339BFD8E1883B7 /* Support Files */,
+			);
+			name = TZImagePickerController;
+			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
+		B5A0E63D1B3270631151EEFAB70F2F2B /* Pods-FounderReader-2.5 */ = {
+			isa = PBXGroup;
+			children = (
+				D0FA4C6FC24F12CA22B15E0B926DB623 /* Info.plist */,
+				D1B2E70FAC7CE63A019842358F566B98 /* Pods-FounderReader-2.5.modulemap */,
+				BCD70EE988B2A4D9DB04C8C0C36A5D68 /* Pods-FounderReader-2.5-acknowledgements.markdown */,
+				BBB343D6C1E7D2A4A8EC72B85A4E1D82 /* Pods-FounderReader-2.5-acknowledgements.plist */,
+				E61B0E71D843403B8FA22EC92F95D769 /* Pods-FounderReader-2.5-dummy.m */,
+				78404924EAAD91C0578867AEB229C753 /* Pods-FounderReader-2.5-frameworks.sh */,
+				0190265D2D85103971F3846A842C2F59 /* Pods-FounderReader-2.5-resources.sh */,
+				76C3525BEFED8EA4C56BB2C79ECB5043 /* Pods-FounderReader-2.5-umbrella.h */,
+				6B5C10B1A4F0C697DAE5F10B6F6F5BD9 /* Pods-FounderReader-2.5.appstore.xcconfig */,
+				C6114ECEA10FDB4D6D7CEF0AC39BDE9E /* Pods-FounderReader-2.5.debug.xcconfig */,
+				EC6803B860D0E613971FAA48FA6F6781 /* Pods-FounderReader-2.5.enterprise.xcconfig */,
+				D75D6333D16D64284ADC9E3F2FDC39BB /* Pods-FounderReader-2.5.release.xcconfig */,
+			);
+			name = "Pods-FounderReader-2.5";
+			path = "Target Support Files/Pods-FounderReader-2.5";
+			sourceTree = "<group>";
+		};
+		BDA97A44CF1C79F8BFF5CB6BBB8F57AD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				279E7C15B6F10C987375AB5CD7469805 /* HappyDNS.modulemap */,
+				063F7DBE659CCABEFC836E3270308360 /* HappyDNS.xcconfig */,
+				E12E32355D9205B3DA832F4B768CE97F /* HappyDNS-dummy.m */,
+				85FB3242658CDACE2A5914696D1A7650 /* HappyDNS-prefix.pch */,
+				0CE0AB89119D9851E6D9698707FA3F7E /* HappyDNS-umbrella.h */,
+				B01DFC0DE999924E5AD6FDDDC80CA08C /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HappyDNS";
+			sourceTree = "<group>";
+		};
+		C5BF2738BB9F89E7EFC5FB946E72842D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				062C35320FEA8FF898E5B9AFD0A1265E /* UMMobClick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3E85828078825B2BF5F2CA706897A70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5A6B4D54F250A747F0D3AB116694FAD /* HappyDNS.framework */,
+				1F34E827A48D126468BF491E76A49465 /* Masonry.framework */,
+				7D5F72BCCACD0983C2440EB9ADAE4892 /* MJExtension.framework */,
+				E112B24D32F62F3553F03D0D63A8B671 /* Pods_FounderReader_2_5.framework */,
+				B7722C56B244B74BEFC70942A0581D7A /* TZImagePickerController.framework */,
+				04DA88880382AAA371C2936BF81F3B11 /* WMPageController.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E571090FB9D544D4F1C76E161B4EEB9B /* PLPlayerKit */ = {
+			isa = PBXGroup;
+			children = (
+				BC8ACAB77B7C8D0B42304E10F502FD12 /* PLPlayer.h */,
+				36D9B2FE53091339E5FC5D2F0754AE26 /* PLPlayerEnv.h */,
+				D8C8FD002AECCB007898EBA112C1FE52 /* PLPlayerError.h */,
+				DBF1E1082C3C674B38217ED066AABE01 /* PLPlayerKit.h */,
+				F992BF9E6BC62BD170E9A6DA69882055 /* PLPlayerOption.h */,
+				84D3FE88C9016FC5D5DD609A21146B0F /* Frameworks */,
+			);
+			name = PLPlayerKit;
+			path = PLPlayerKit;
+			sourceTree = "<group>";
+		};
+		EDFA01AF6D688FD33F339BFD8E1883B7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				55C0B16F626211138BA666323784E274 /* Info.plist */,
+				9D03071363CBE68D9EDD44F269CA8DF6 /* TZImagePickerController.modulemap */,
+				0D6BB05527891DDEA68A4CB68CBD0B75 /* TZImagePickerController.xcconfig */,
+				B778DEFDBD1D540B0D7DD1BCAF304245 /* TZImagePickerController-dummy.m */,
+				77928FE88C4B4454EDF529BB75E7BFCF /* TZImagePickerController-prefix.pch */,
+				8FFC92A533BB46979803E3DC1D4CE9AC /* TZImagePickerController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TZImagePickerController";
+			sourceTree = "<group>";
+		};
+		F51F4CAD599589E1A173A0322DF31009 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5A0E63D1B3270631151EEFAB70F2F2B /* Pods-FounderReader-2.5 */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		14938E553B4E249984D29AD1A36F0383 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E94DB62A24FFDF1061CB44760581C48 /* Pods-FounderReader-2.5-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		667C804973830A89A6E20B77D5A4117D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7875308D7AA002CE77C559B4985FDD6 /* HappyDNS-umbrella.h in Headers */,
+				D528B65765BAF6103131D2EADF876A37 /* HappyDNS.h in Headers */,
+				B21CC8D9528A989583CB2358AA30FD28 /* QNAssessment.h in Headers */,
+				C38C11A9C7BC65E7F5E07833C5A80D29 /* QNDes.h in Headers */,
+				637909F24E8C3E31EE8166B795005253 /* QNDnsManager.h in Headers */,
+				6DE7B44682748B2C2EBDF6580EBD3D2E /* QNDnspodEnterprise.h in Headers */,
+				AE1B9D11883AB97B4A55DAF22817BFAA /* QNDnspodFree.h in Headers */,
+				9D938305207E75971D48D47F294E408A /* QNDomain.h in Headers */,
+				68DBB89FB34B1876BF8999B32BE07145 /* QNGetAddrInfo.h in Headers */,
+				99BF0777718F865D460B34D6324C84F3 /* QNHex.h in Headers */,
+				FA968E6B5DBE6C4DC2F5C9EFCE72CEEB /* QNHijackingDetectWrapper.h in Headers */,
+				72DC472E171514AEF51FFD687D56D092 /* QNHosts.h in Headers */,
+				F9FC4BC1C440644D97A2AD3DDD817253 /* QNIP.h in Headers */,
+				D19A9D3FE97D8135F59482490656ED43 /* QNIpModel.h in Headers */,
+				978F93B2308A36D036A7C1CC419A6159 /* QNLruCache.h in Headers */,
+				4FF420726929F3CCBB4480072B53D6BA /* QNNetworkInfo.h in Headers */,
+				9F4DDD276C92E3BC3EF77634598A3001 /* QNRecord.h in Headers */,
+				E808DBA43070B012A847A57C661B25F0 /* QNRefresher.h in Headers */,
+				DD1A3B046B626595D188B079FB7CEA62 /* QNResolver.h in Headers */,
+				54EE29D1641505DDFB2C2622050FBCC6 /* QNResolverDelegate.h in Headers */,
+				773B5FC48F9C6048577195B9402430DA /* QNResolvUtil.h in Headers */,
+				5765219211564EADE297C111C81E1279 /* QNTxtResolver.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77BEE4CA55C8DAEC9A153952A19837D2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B7AD593ECF62D9A5D46F567CD25E89 /* MASCompositeConstraint.h in Headers */,
+				FF79CFFF9AC1B2EDE62AAA808EA7FA28 /* MASConstraint+Private.h in Headers */,
+				E88D3C0E79DF25C110C7AD912ADC2B08 /* MASConstraint.h in Headers */,
+				55B69B16C18E10ED9E118F529B12750C /* MASConstraintMaker.h in Headers */,
+				21113674EAEF00F04FB5E5299970035C /* MASLayoutConstraint.h in Headers */,
+				D68DE6A9337039F82E54FCB1F4D13F63 /* Masonry-umbrella.h in Headers */,
+				490CAF91F2D97390252F9CDCB2A8ED11 /* Masonry.h in Headers */,
+				1DF93B62A24E9B375AEE187D6C623DD8 /* MASUtilities.h in Headers */,
+				7A9D17250D5A25B0BA3973E7AB9BC5B4 /* MASViewAttribute.h in Headers */,
+				5B562E120ACA062BD999F0652F624ACC /* MASViewConstraint.h in Headers */,
+				07727BFDDE0C1124659AA6829C862700 /* NSArray+MASAdditions.h in Headers */,
+				52F22CC500FD42C87AA9F7F1CCD095A0 /* NSArray+MASShorthandAdditions.h in Headers */,
+				CB97AF0FFCF751B92449BB4FE77573E9 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				639C228566CB73E471E1AB406F1D2E4F /* View+MASAdditions.h in Headers */,
+				10C654808709BE4D1CD56D5027F5D722 /* View+MASShorthandAdditions.h in Headers */,
+				E438E1E21108516EA48D785975F5D99E /* ViewController+MASAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89F8446D8F6DCEAA4BF283CE7B3F9B2E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6845EEE1D2D159F445A7347020F9C442 /* NSBundle+TZImagePicker.h in Headers */,
+				6589F4C34E6CD4DC4C83437AB47C192F /* TZAssetCell.h in Headers */,
+				8F8C6E66F821F34B64E2EC5BAABA68EA /* TZAssetModel.h in Headers */,
+				7A8E8953773959E0EEEB20F67884440B /* TZGifPhotoPreviewController.h in Headers */,
+				EC2F74318795B874286BF73BB74D38C8 /* TZImageCropManager.h in Headers */,
+				4B28607AE79FF06199FF4B0B1F79C0F4 /* TZImageManager.h in Headers */,
+				9C6A409FFCAA1000815CD2A187171645 /* TZImagePickerController-umbrella.h in Headers */,
+				694ECED62C37B393CE7A4946142414A9 /* TZImagePickerController.h in Headers */,
+				79DC5066A1E61630601432C038738EDA /* TZLocationManager.h in Headers */,
+				EBCEA3CEAB2048348704EA0218D56ACA /* TZPhotoPickerController.h in Headers */,
+				3C6F517D84DBDA9017D59ADCBC651618 /* TZPhotoPreviewCell.h in Headers */,
+				D7764E4FA7D4F0EB7991CD8132177050 /* TZPhotoPreviewController.h in Headers */,
+				78ED1AE540317D87F660454524C88F86 /* TZProgressView.h in Headers */,
+				24CEE9B8C63ADDD8A10327A451C9BB4F /* TZVideoPlayerController.h in Headers */,
+				F919BF1835FAC7F3637185444DE5C2B6 /* UIView+Layout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE0C3BDFD6FFC56D63D8A04AD9A55142 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D35395742DB242F4D7163B5F74CCBB5 /* MJExtension-umbrella.h in Headers */,
+				77BB6855BAE16DE217613CFDD560CA2B /* MJExtension.h in Headers */,
+				8B83861ED2F835E33B0CBEA85F845742 /* MJExtensionConst.h in Headers */,
+				120E717B81CFE129E6AB4E8AB6E62BC6 /* MJFoundation.h in Headers */,
+				41E9BDE64F4AF303A45AF36DC1C4B5C1 /* MJProperty.h in Headers */,
+				D97E67DFFCF04B7D2C13034896B40EC3 /* MJPropertyKey.h in Headers */,
+				CBC6F4FE2DEB192CC0221510FC907CD3 /* MJPropertyType.h in Headers */,
+				A3C4F2F747471C9775A6324124F662DA /* NSObject+MJClass.h in Headers */,
+				7A27F2E793199C8CF12403AAF39DA5CA /* NSObject+MJCoding.h in Headers */,
+				8AEDF98057DE612F26675BD1D8F8C91E /* NSObject+MJKeyValue.h in Headers */,
+				821B1C48D961823FC592E70B3F705F6B /* NSObject+MJProperty.h in Headers */,
+				DA68EDA7F95055E5925C803201409156 /* NSString+MJExtension.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3D9165EDA9744BA65F820E54156F900 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7489E6B251406AB6B071DE7B44FB2432 /* WMMenuItem.h in Headers */,
+				F0588CD057D022A8DBA6961E55D5D068 /* WMMenuView.h in Headers */,
+				CABE7D3A934CCA46359FC6EB3091268F /* WMPageController-umbrella.h in Headers */,
+				647FBB123EAA2E579C5C99576AD6E91B /* WMPageController.h in Headers */,
+				F6FEFC0F5F324A257094A8C6078C83CE /* WMProgressView.h in Headers */,
+				BCBD579AB2CE2C697155F1308F1F016B /* WMScrollView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		137BBB7D228F2B023F3BB1F3063A1E41 /* Masonry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C36880959FC4F741D13143BB523D7E8 /* Build configuration list for PBXNativeTarget "Masonry" */;
+			buildPhases = (
+				33A98ED77211EA8648D53DF4B6CC93D1 /* Sources */,
+				47AE7865E5CFD4D12EF3926AB785529F /* Frameworks */,
+				77BEE4CA55C8DAEC9A153952A19837D2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Masonry;
+			productName = Masonry;
+			productReference = 1F34E827A48D126468BF491E76A49465 /* Masonry.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5CA83B898A1FC784DFDC777BD6697F76 /* Pods-FounderReader-2.5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09E807AD1752D734C9F22838125FF395 /* Build configuration list for PBXNativeTarget "Pods-FounderReader-2.5" */;
+			buildPhases = (
+				ECA03961F922C5586D0D2A5DA9CDB7E6 /* Sources */,
+				4AAA3538D4BB3E33E59D7122772F70F5 /* Frameworks */,
+				14938E553B4E249984D29AD1A36F0383 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7FEC078927A68860202C877561BCB14 /* PBXTargetDependency */,
+				C90676D265E98A8F6746C0B14139DCEC /* PBXTargetDependency */,
+				85A369141CAEC37A77B087EB87CF6699 /* PBXTargetDependency */,
+				744C3E1F1C19D95852C4D202BF072023 /* PBXTargetDependency */,
+				53CD8D5CCF5E3A097413EAC4F82D8B27 /* PBXTargetDependency */,
+			);
+			name = "Pods-FounderReader-2.5";
+			productName = "Pods-FounderReader-2.5";
+			productReference = E112B24D32F62F3553F03D0D63A8B671 /* Pods_FounderReader_2_5.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8B0C990731BC1B3378029C6B4D224DA5 /* WMPageController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2541CC1EE256E97061A912B8FEA5530D /* Build configuration list for PBXNativeTarget "WMPageController" */;
+			buildPhases = (
+				21A275115F67D4FFB805AEAD26722D50 /* Sources */,
+				F7C80A020354459FAFB11615C14592F7 /* Frameworks */,
+				E3D9165EDA9744BA65F820E54156F900 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WMPageController;
+			productName = WMPageController;
+			productReference = 04DA88880382AAA371C2936BF81F3B11 /* WMPageController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		950897F9978E54E553ED2E4DCE80F621 /* HappyDNS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8539771228F581958EFE6E40E3CD9260 /* Build configuration list for PBXNativeTarget "HappyDNS" */;
+			buildPhases = (
+				3C6EC01EB5F0E6210229DA1C679EBFF7 /* Sources */,
+				912D8B5D3F8E7F7D22DA4A00FFF43802 /* Frameworks */,
+				667C804973830A89A6E20B77D5A4117D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappyDNS;
+			productName = HappyDNS;
+			productReference = A5A6B4D54F250A747F0D3AB116694FAD /* HappyDNS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B91BD7510AEF06A4E84366AA6155BB55 /* TZImagePickerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7C1E9DA72C9D11EA83E4152C4AE77CE /* Build configuration list for PBXNativeTarget "TZImagePickerController" */;
+			buildPhases = (
+				700662966EC01CA54ED4A860FC222802 /* Sources */,
+				E4061E3D2C2327F86C559E52E4F51471 /* Frameworks */,
+				89F8446D8F6DCEAA4BF283CE7B3F9B2E /* Headers */,
+				3EF98CA9864F00F427DA0DB48F6ABE06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TZImagePickerController;
+			productName = TZImagePickerController;
+			productReference = B7722C56B244B74BEFC70942A0581D7A /* TZImagePickerController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BBC5047425B6C7A694F226483705A0B3 /* MJExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3BA2A127451D52812087BEB00AC9785 /* Build configuration list for PBXNativeTarget "MJExtension" */;
+			buildPhases = (
+				AD9D3067157714AF92EC6258E43C1D91 /* Sources */,
+				669EDF0EB5A9A96F20F498E0DAB7F255 /* Frameworks */,
+				DE0C3BDFD6FFC56D63D8A04AD9A55142 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MJExtension;
+			productName = MJExtension;
+			productReference = 7D5F72BCCACD0983C2440EB9ADAE4892 /* MJExtension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = E3E85828078825B2BF5F2CA706897A70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				950897F9978E54E553ED2E4DCE80F621 /* HappyDNS */,
+				137BBB7D228F2B023F3BB1F3063A1E41 /* Masonry */,
+				BBC5047425B6C7A694F226483705A0B3 /* MJExtension */,
+				5CA83B898A1FC784DFDC777BD6697F76 /* Pods-FounderReader-2.5 */,
+				B91BD7510AEF06A4E84366AA6155BB55 /* TZImagePickerController */,
+				8B0C990731BC1B3378029C6B4D224DA5 /* WMPageController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EF98CA9864F00F427DA0DB48F6ABE06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83219F62115143A8689C5656107065CC /* TZImagePickerController.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21A275115F67D4FFB805AEAD26722D50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9807E275E870EB6A8ED3F542F6CF209 /* WMMenuItem.m in Sources */,
+				2B11ACD96A40E24F642A30AAA4C7830D /* WMMenuView.m in Sources */,
+				227DC36A81E6C15C9E169EE4884FA696 /* WMPageController-dummy.m in Sources */,
+				47E6A6629073C3E740B995B1175FE592 /* WMPageController.m in Sources */,
+				6CB4B5215A8859236AC799AFF521D038 /* WMProgressView.m in Sources */,
+				BCDFDC23F8727A8FD363FCBF864688BC /* WMScrollView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33A98ED77211EA8648D53DF4B6CC93D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5701C2CFFDCBFD93949C57A8DFB0FF5 /* MASCompositeConstraint.m in Sources */,
+				B8CB3ACA09C5894D33D51DF1B94703F5 /* MASConstraint.m in Sources */,
+				5EEB16BBBD4F928D44D50ED773E1B493 /* MASConstraintMaker.m in Sources */,
+				5993B2EC0E5008889076B34D6F3B9CFC /* MASLayoutConstraint.m in Sources */,
+				2142EABFB5D1835D26D8A8831165D014 /* Masonry-dummy.m in Sources */,
+				95D7FEDF579BD8924033EA13E31873D0 /* MASViewAttribute.m in Sources */,
+				DC3294DDD5786756B9AC9A43DAD5DCB1 /* MASViewConstraint.m in Sources */,
+				F8CA5DF4B5964A2BDD90098581134208 /* NSArray+MASAdditions.m in Sources */,
+				D1DE224E4C307D1F0D9B70856F10B1E0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				D64C06F31524E3B78772EBE55F19CB34 /* View+MASAdditions.m in Sources */,
+				DF1E03DCE79E0B7FD921EA34458CB6D7 /* ViewController+MASAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C6EC01EB5F0E6210229DA1C679EBFF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFD5F9B5357162D75A24D44E1F3DE931 /* HappyDNS-dummy.m in Sources */,
+				DE5F7D0ED16BFD97B40B2320B23D55CC /* QNAssessment.m in Sources */,
+				9AAAFF1E6C4E419F0F247B3E0D40B6D6 /* QNDes.m in Sources */,
+				895856CA3474F5197BD1FB3595AE3785 /* QNDnsManager.m in Sources */,
+				9E7AABE3332A0160398436DD5ED4C7B9 /* QNDnspodEnterprise.m in Sources */,
+				C391DDAA9C5F187FD96582900CD58DF9 /* QNDnspodFree.m in Sources */,
+				122ADA64D7A36E10D48E7ED61F2B8A56 /* QNDomain.m in Sources */,
+				1F83A4B7F25C9218913C539ACE7D9E00 /* QNGetAddrInfo.m in Sources */,
+				5456CD52FEE79A3B496E6D69A53752D5 /* QNHex.m in Sources */,
+				00D4301F30E60AB0751F3863E923BFAF /* QNHijackingDetectWrapper.m in Sources */,
+				8599135E97877DEA96B4130770FB5301 /* QNHosts.m in Sources */,
+				765D5E9511915964AF656CEE30A43848 /* QNIP.m in Sources */,
+				B46D34AD7F125B35CD9A6336321CD543 /* QNIpModel.m in Sources */,
+				CCAB65F531163A3EFF8953088FFF958C /* QNLruCache.m in Sources */,
+				2F2A3F2ED3CEA9F96260AA2BBCCCEFD2 /* QNNetworkInfo.m in Sources */,
+				30878EC2A97A8F9CD57CE3FCD6C9F683 /* QNRecord.m in Sources */,
+				843DD931018D33F7A3A99541725E7C18 /* QNRefresher.m in Sources */,
+				8603EB76C79BF7529D6D51B541CFB3D1 /* QNResolver.m in Sources */,
+				E4225A09193008B3887BE5602E9FCAD8 /* QNResolvUtil.m in Sources */,
+				4636BC283F0222605DCE6A07EC2658D7 /* QNTxtResolver.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		700662966EC01CA54ED4A860FC222802 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4D7726CDA6512A3CF4F305A7CE5E136 /* NSBundle+TZImagePicker.m in Sources */,
+				FC1CB31F66B0AD385081E1C046BE1248 /* TZAssetCell.m in Sources */,
+				8A6A6F0EEA0EAE6D361095C27E6E5C8F /* TZAssetModel.m in Sources */,
+				B36CE25F3524C1ADB9992E496C178C05 /* TZGifPhotoPreviewController.m in Sources */,
+				AFF837B69E73E3DC5EA631D2F347442A /* TZImageCropManager.m in Sources */,
+				FBC23215F4C0C48D704FBA853F28C5B4 /* TZImageManager.m in Sources */,
+				FBE3361AAAADBDBF4132B86A6C11D627 /* TZImagePickerController-dummy.m in Sources */,
+				6418330DB3E2A6828FF7CEB4B61B8D92 /* TZImagePickerController.m in Sources */,
+				DD3A14FB260B55B75E78E7FC5894C596 /* TZLocationManager.m in Sources */,
+				AAF1C563B7F3C8858FB03CC59B29B091 /* TZPhotoPickerController.m in Sources */,
+				7A4E77FE7C40000F00E91DCC2DE74166 /* TZPhotoPreviewCell.m in Sources */,
+				A879659EDD89B8414C63D35BD659A90C /* TZPhotoPreviewController.m in Sources */,
+				F427F0EABF511326D2387CF77D22FDDE /* TZProgressView.m in Sources */,
+				09548874B0C5838AE8552CA985218FEF /* TZVideoPlayerController.m in Sources */,
+				CD03E7090762B49177C16DA89DAE34E8 /* UIView+Layout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD9D3067157714AF92EC6258E43C1D91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48123D58437848996B79ACC007894CE6 /* MJExtension-dummy.m in Sources */,
+				16397574D5848CBE57C762E5435FA71E /* MJExtensionConst.m in Sources */,
+				29504A501803092112E84D29E38CA454 /* MJFoundation.m in Sources */,
+				EC0DEE720A254ADC4462EF871B0BBEEB /* MJProperty.m in Sources */,
+				52AFB5E12047080413C9E63C0084E615 /* MJPropertyKey.m in Sources */,
+				00D9523A6AA36B372C40040807226EED /* MJPropertyType.m in Sources */,
+				7DDE84B03D9548153D93B4AED50B7ADE /* NSObject+MJClass.m in Sources */,
+				3E870941D67AC55F58E9D823F4A68314 /* NSObject+MJCoding.m in Sources */,
+				CC158D56D9CD1153F91D42BBA4684740 /* NSObject+MJKeyValue.m in Sources */,
+				C8047E08C11D3C461BF1D411CE32E1DF /* NSObject+MJProperty.m in Sources */,
+				E1FBEC6604F8696A193B9298CD9B2822 /* NSString+MJExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECA03961F922C5586D0D2A5DA9CDB7E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62685DB46BD91B5DE4057A4A2F5557C7 /* Pods-FounderReader-2.5-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53CD8D5CCF5E3A097413EAC4F82D8B27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WMPageController;
+			target = 8B0C990731BC1B3378029C6B4D224DA5 /* WMPageController */;
+			targetProxy = 51B231FA69F51592FC290C35E6468316 /* PBXContainerItemProxy */;
+		};
+		744C3E1F1C19D95852C4D202BF072023 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TZImagePickerController;
+			target = B91BD7510AEF06A4E84366AA6155BB55 /* TZImagePickerController */;
+			targetProxy = D8F52EE686C429814915D9B9DA94FE22 /* PBXContainerItemProxy */;
+		};
+		85A369141CAEC37A77B087EB87CF6699 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 137BBB7D228F2B023F3BB1F3063A1E41 /* Masonry */;
+			targetProxy = 35F9ED13A83975815DCA61638733F900 /* PBXContainerItemProxy */;
+		};
+		A7FEC078927A68860202C877561BCB14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HappyDNS;
+			target = 950897F9978E54E553ED2E4DCE80F621 /* HappyDNS */;
+			targetProxy = 2F418B764AEBA32CCF718498EC3EE8BD /* PBXContainerItemProxy */;
+		};
+		C90676D265E98A8F6746C0B14139DCEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MJExtension;
+			target = BBC5047425B6C7A694F226483705A0B3 /* MJExtension */;
+			targetProxy = 53ED2DF03C507CC751E10651BAC63F1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07F1E0C8622F90DD8DA438B14C0D04FD /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F457388B5F8AC23D3F4F728E6ACBB9AF /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AppStore;
+		};
+		14E32F6719104FE2BB351AD3A01CB76E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D6BB05527891DDEA68A4CB68CBD0B75 /* TZImagePickerController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TZImagePickerController/TZImagePickerController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TZImagePickerController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TZImagePickerController/TZImagePickerController.modulemap";
+				PRODUCT_NAME = TZImagePickerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1794C30DAF53B08DDE379255030CA32B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 063F7DBE659CCABEFC836E3270308360 /* HappyDNS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HappyDNS/HappyDNS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HappyDNS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HappyDNS/HappyDNS.modulemap";
+				PRODUCT_NAME = HappyDNS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		31D87907E806ED4CF5088171DA14C9C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CAFA2F4C61AD55F29A893AF31FD84F /* MJExtension.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MJExtension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MJExtension/MJExtension.modulemap";
+				PRODUCT_NAME = MJExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3840F861204C564084DA1F5E5BDCD539 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CAFA2F4C61AD55F29A893AF31FD84F /* MJExtension.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MJExtension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MJExtension/MJExtension.modulemap";
+				PRODUCT_NAME = MJExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AppStore;
+		};
+		45F0DAF4EAAF6B02E3ED414E31939927 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F457388B5F8AC23D3F4F728E6ACBB9AF /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Enterprise;
+		};
+		52C9FA0F72F7ADADFF8670B12AC51034 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F457388B5F8AC23D3F4F728E6ACBB9AF /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6344A46F6CD56B8489A27DA8C9E21F3D /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC6803B860D0E613971FAA48FA6F6781 /* Pods-FounderReader-2.5.enterprise.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FounderReader-2.5/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FounderReader-2.5/Pods-FounderReader-2.5.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FounderReader_2_5;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Enterprise;
+		};
+		70798BCB55234EC47ADCA41C1E8B7806 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8BD07E2D47EB0E446E2D41632A0E430 /* WMPageController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WMPageController/WMPageController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WMPageController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WMPageController/WMPageController.modulemap";
+				PRODUCT_NAME = WMPageController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7A4FE1C13F2D500983BC2784A5381F21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 063F7DBE659CCABEFC836E3270308360 /* HappyDNS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HappyDNS/HappyDNS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HappyDNS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HappyDNS/HappyDNS.modulemap";
+				PRODUCT_NAME = HappyDNS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		890F58C6B1633439643232D84A32C3B0 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CAFA2F4C61AD55F29A893AF31FD84F /* MJExtension.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MJExtension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MJExtension/MJExtension.modulemap";
+				PRODUCT_NAME = MJExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Enterprise;
+		};
+		8AE10D9F663F6233FD10BE0EC7C67FFF /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8BD07E2D47EB0E446E2D41632A0E430 /* WMPageController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WMPageController/WMPageController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WMPageController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WMPageController/WMPageController.modulemap";
+				PRODUCT_NAME = WMPageController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AppStore;
+		};
+		98FD7F92170E7161C09475EADCBD8FCE /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B5C10B1A4F0C697DAE5F10B6F6F5BD9 /* Pods-FounderReader-2.5.appstore.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FounderReader-2.5/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FounderReader-2.5/Pods-FounderReader-2.5.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FounderReader_2_5;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AppStore;
+		};
+		99BBC3408C915DAA652EC2B76AFE1608 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_ENTERPRISE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Enterprise;
+		};
+		9C56EAAA6B0C1B200B4BEB0F37D2A2E7 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 063F7DBE659CCABEFC836E3270308360 /* HappyDNS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HappyDNS/HappyDNS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HappyDNS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HappyDNS/HappyDNS.modulemap";
+				PRODUCT_NAME = HappyDNS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AppStore;
+		};
+		9D8CD1E396072A7FC058D9683F6A59A8 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D6BB05527891DDEA68A4CB68CBD0B75 /* TZImagePickerController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TZImagePickerController/TZImagePickerController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TZImagePickerController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TZImagePickerController/TZImagePickerController.modulemap";
+				PRODUCT_NAME = TZImagePickerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Enterprise;
+		};
+		A538C5BC9494260DEB35292779432DFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D6BB05527891DDEA68A4CB68CBD0B75 /* TZImagePickerController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TZImagePickerController/TZImagePickerController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TZImagePickerController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TZImagePickerController/TZImagePickerController.modulemap";
+				PRODUCT_NAME = TZImagePickerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A7BCCE01D2142B7851722B5C55ABCD78 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8BD07E2D47EB0E446E2D41632A0E430 /* WMPageController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WMPageController/WMPageController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WMPageController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WMPageController/WMPageController.modulemap";
+				PRODUCT_NAME = WMPageController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Enterprise;
+		};
+		AFE74DF836E40327CF36902E5D6B7F45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CAFA2F4C61AD55F29A893AF31FD84F /* MJExtension.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MJExtension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MJExtension/MJExtension.modulemap";
+				PRODUCT_NAME = MJExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B97D6EDB2B30E755957769EBB112BA34 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D6BB05527891DDEA68A4CB68CBD0B75 /* TZImagePickerController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TZImagePickerController/TZImagePickerController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TZImagePickerController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TZImagePickerController/TZImagePickerController.modulemap";
+				PRODUCT_NAME = TZImagePickerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AppStore;
+		};
+		C5DDDCE3942A8E9ED840CC74E9890987 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D75D6333D16D64284ADC9E3F2FDC39BB /* Pods-FounderReader-2.5.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FounderReader-2.5/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FounderReader-2.5/Pods-FounderReader-2.5.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FounderReader_2_5;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C5FB4CA890BECE172DE616DBAA2FB9A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F457388B5F8AC23D3F4F728E6ACBB9AF /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D174F6C46F2F398361A68E52A18B794A /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_APP_STORE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = AppStore;
+		};
+		E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E72DED2ED4B58397E9F02629F2216479 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 063F7DBE659CCABEFC836E3270308360 /* HappyDNS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HappyDNS/HappyDNS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HappyDNS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HappyDNS/HappyDNS.modulemap";
+				PRODUCT_NAME = HappyDNS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Enterprise;
+		};
+		E75273BA916DBD62E58344ED33B6E5C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8BD07E2D47EB0E446E2D41632A0E430 /* WMPageController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WMPageController/WMPageController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WMPageController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WMPageController/WMPageController.modulemap";
+				PRODUCT_NAME = WMPageController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F88184EAAB3F6D8FFB1C27E4170E5D01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6114ECEA10FDB4D6D7CEF0AC39BDE9E /* Pods-FounderReader-2.5.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FounderReader-2.5/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FounderReader-2.5/Pods-FounderReader-2.5.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FounderReader_2_5;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09E807AD1752D734C9F22838125FF395 /* Build configuration list for PBXNativeTarget "Pods-FounderReader-2.5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98FD7F92170E7161C09475EADCBD8FCE /* AppStore */,
+				F88184EAAB3F6D8FFB1C27E4170E5D01 /* Debug */,
+				6344A46F6CD56B8489A27DA8C9E21F3D /* Enterprise */,
+				C5DDDCE3942A8E9ED840CC74E9890987 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2541CC1EE256E97061A912B8FEA5530D /* Build configuration list for PBXNativeTarget "WMPageController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AE10D9F663F6233FD10BE0EC7C67FFF /* AppStore */,
+				E75273BA916DBD62E58344ED33B6E5C4 /* Debug */,
+				A7BCCE01D2142B7851722B5C55ABCD78 /* Enterprise */,
+				70798BCB55234EC47ADCA41C1E8B7806 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D174F6C46F2F398361A68E52A18B794A /* AppStore */,
+				E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */,
+				99BBC3408C915DAA652EC2B76AFE1608 /* Enterprise */,
+				B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8539771228F581958EFE6E40E3CD9260 /* Build configuration list for PBXNativeTarget "HappyDNS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C56EAAA6B0C1B200B4BEB0F37D2A2E7 /* AppStore */,
+				1794C30DAF53B08DDE379255030CA32B /* Debug */,
+				E72DED2ED4B58397E9F02629F2216479 /* Enterprise */,
+				7A4FE1C13F2D500983BC2784A5381F21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C36880959FC4F741D13143BB523D7E8 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07F1E0C8622F90DD8DA438B14C0D04FD /* AppStore */,
+				C5FB4CA890BECE172DE616DBAA2FB9A6 /* Debug */,
+				45F0DAF4EAAF6B02E3ED414E31939927 /* Enterprise */,
+				52C9FA0F72F7ADADFF8670B12AC51034 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7C1E9DA72C9D11EA83E4152C4AE77CE /* Build configuration list for PBXNativeTarget "TZImagePickerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B97D6EDB2B30E755957769EBB112BA34 /* AppStore */,
+				A538C5BC9494260DEB35292779432DFA /* Debug */,
+				9D8CD1E396072A7FC058D9683F6A59A8 /* Enterprise */,
+				14E32F6719104FE2BB351AD3A01CB76E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3BA2A127451D52812087BEB00AC9785 /* Build configuration list for PBXNativeTarget "MJExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3840F861204C564084DA1F5E5BDCD539 /* AppStore */,
+				AFE74DF836E40327CF36902E5D6B7F45 /* Debug */,
+				890F58C6B1633439643232D84A32C3B0 /* Enterprise */,
+				31D87907E806ED4CF5088171DA14C9C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

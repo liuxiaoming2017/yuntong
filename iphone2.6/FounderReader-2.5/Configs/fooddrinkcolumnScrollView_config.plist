@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>scrollView_Frame</key>
+	<string>{{0,15},{320,200}}</string>
+	<key>pageFooter_Frame</key>
+	<string>{{110,170},{100,15}}</string>
+	<key>cellWidth</key>
+	<string>150</string>
+	<key>cellHeight</key>
+	<string>70</string>
+	<key>cellDiv_col</key>
+	<string>5</string>
+	<key>cellDiv_Row</key>
+	<string>5</string>
+	<key>cellNum_Row</key>
+	<string>2</string>
+	<key>cellNum_col</key>
+	<string>2</string>
+</dict>
+</plist>
