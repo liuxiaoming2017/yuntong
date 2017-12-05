@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 @class GovSubscribeCell;
 @protocol GovSubscribeCellDelegate<NSObject>
--(void)buttonClickCell:(UITableViewCell *)tableViewCell;
+-(void)buttonClickCell:(UITableViewCell *)tableViewCell withBool:(BOOL)selected;
 @end
 @interface GovSubscribeCell : UITableViewCell
 

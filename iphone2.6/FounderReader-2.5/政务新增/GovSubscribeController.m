@@ -149,12 +149,16 @@ static NSString *rightIdentifier = @"rightIdentifier";
     }
 }
 
--(void)buttonClickCell:(UITableViewCell *)tableViewCell
+-(void)buttonClickCell:(UITableViewCell *)tableViewCell withBool:(BOOL)selected
 {
     NSIndexPath *indexPath = [self.rightTableView indexPathForCell:tableViewCell];
     //GovSubscribeCell *cell = (GovSubscribeCell *)tableViewCell;
     NSLog(@"haha:%ld",indexPath.row);
-    [Global showCustomMessage:@"您已成功定制此栏目"];
+    if(selected){
+        [Global showCustomMessage:@"您已成功定制此栏目"];
+    }else{
+        [Global showCustomMessage:@"您已成功取消定制此栏目"];
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated

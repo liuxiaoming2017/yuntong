@@ -19,8 +19,8 @@
     
     sender.selected=!sender.selected;
     
-    if([self.delegate respondsToSelector:@selector(buttonClickCell:)]){
-        [self.delegate buttonClickCell:self];
+    if([self.delegate respondsToSelector:@selector(buttonClickCell:withBool:)]){
+        [self.delegate buttonClickCell:self withBool:sender.selected];
     }
 }
 
