@@ -417,17 +417,18 @@
 {
 
     if ([NSString isNilOrEmpty:self.pwTextField.text]) {
-        [UIAlertView showAlert:NSLocalizedString(@"密码不能为空",nil)];
+        [self showAlwetController:@"密码不能为空"];
         return NO;
     }
     
     if ((self.pwTextField.text.length < 6 || self.pwTextField.text.length > 25) || (self.pw2TextField.text.length < 6 || self.pw2TextField.text.length > 25)) {
-        [UIAlertView showAlert:NSLocalizedString(@"密码长度在6~25位之间",nil)];
+        
+        [self showAlwetController:@"密码长度在6~25位之间"];
         return NO;
     }
     
     if (![self.pwTextField.text isEqualToString:self.pw2TextField.text]){
-        [UIAlertView showAlert:NSLocalizedString(@"输入密码不一致",nil)];
+        [self showAlwetController:@"输入密码不一致"];
         return NO;
     }
     
@@ -542,19 +543,20 @@
     [self.view endEditing:YES];
 
     if(self.phoneTextField.text.length == 0){
-        [UIAlertView showAlert:NSLocalizedString(@"请输入手机号",nil)];
+       
+        [self showAlwetController:@"请输入手机号"];
         return;
     }
     
     if(self.checkTextField.text.length == 0){
-        [UIAlertView showAlert:NSLocalizedString(@"请输入短信验证码",nil)];
+        [self showAlwetController:@"请输入短信验证码"];
         return;
     }
     
     if (![self.checkTextField.text isEqualToString:NSLocalizedString(@"您的手机号已验证成功",nil)]) {
         
         if (self.checkTextField.text.length < 4 || self.checkTextField.text.length > 6) {
-            [UIAlertView showAlert:NSLocalizedString(@"请输入4~6位正确的验证码",nil)];
+            [self showAlwetController:@"请输入4~6位正确的验证码"];
             self.checkTextField.text = nil;
             return;
         }
@@ -597,28 +599,36 @@
         return;
     }
     
-    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:self.phoneTextField.text
-                                                  message:NSLocalizedString(@"获取验证码到上面的手机号码",nil)
-                                                 delegate:self
-                                        cancelButtonTitle:NSLocalizedString(@"取消",nil)
-                                        otherButtonTitles:NSLocalizedString(@"确认",nil), nil];
-    [alert show];
-    
+//    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:self.phoneTextField.text
+//                                                  message:NSLocalizedString(@"获取验证码到上面的手机号码",nil)
+//                                                 delegate:self
+//                                        cancelButtonTitle:NSLocalizedString(@"取消",nil)
+//                                        otherButtonTitles:NSLocalizedString(@"确认",nil), nil];
+//    [alert show];
+    NSLog(@"haha:%@",self.phoneTextField.text);
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:self.phoneTextField.text message:@"获取验证码到上面的手机号码" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self getVerifyCode];
+    }];
+    UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alertVC addAction:sureAction];
+    [alertVC addAction:cancleAction];
+    [self presentViewController:alertVC animated:YES completion:nil];
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (1 == buttonIndex){
-        [self getVerifyCode];
-        /* 取消港澳台
-        if (self.phoneTextField.text.length != 11)
-            [self setupPickView];
-        else {
-            _areaCode = @"86";
-            [self getVerifyCode];
-        }*/
-    }
-}
+//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+//{
+//    if (1 == buttonIndex){
+//        [self getVerifyCode];
+//        /* 取消港澳台
+//        if (self.phoneTextField.text.length != 11)
+//            [self setupPickView];
+//        else {
+//            _areaCode = @"86";
+//            [self getVerifyCode];
+//        }*/
+//    }
+//}
 
 - (void)setupPickView
 {
@@ -662,6 +672,7 @@
             if ([areaCode hasPrefix:@"00"]) {
                 areaCode = [areaCode substringFromIndex:2];
             }
+            [self getVerifyCodeByAli];
 //            [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phoneNumber zone:areaCode customIdentifier:nil result:^(NSError *error) {
 //                if (error == NULL) {
 //                    // 若返回结果太慢，用户已经点击【重新获取】采用阿里大于后则不提示
@@ -828,6 +839,16 @@
     [UIView animateWithDuration:.3 animations:^{
         self.view.y = 64;
     }];
+}
+
+- (void)showAlwetController:(NSString *)str
+{
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:str message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alertVC addAction:cancleAction];
+    [self presentViewController:alertVC animated:YES completion:nil];
 }
 
 @end

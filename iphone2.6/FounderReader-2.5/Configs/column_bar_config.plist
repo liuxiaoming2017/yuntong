@@ -13,11 +13,11 @@
 	<key>column_head_height_说明</key>
 	<string>栏目Header的高度（默认0）,需要Logo导航则设置为40</string>
 	<key>column_head_height</key>
-	<integer>0</integer>
+	<integer>40</integer>
 	<key>column_head_backcolor_说明</key>
 	<string>栏目Header的背景色（默认 19,183,246 ），需要调整Logo则设置为 255,255,255</string>
 	<key>column_head_backcolor</key>
-	<string>19,183,246</string>
+	<string>204,0,0</string>
 	<key>column_button_height_说明</key>
 	<string>栏目条高度</string>
 	<key>column_button_height</key>
@@ -43,23 +43,23 @@
 	<key>column_name_font_seledcolor说明</key>
 	<string>栏目导航条选中颜色</string>
 	<key>column_name_font_seledcolor</key>
-	<string>255,255,255</string>
+	<string>204,0,0</string>
 	<key>column_name_font_color说明</key>
 	<string>栏目导航条未选中颜色</string>
 	<key>column_name_font_color</key>
-	<string>255,255,255</string>
+	<string>0,0,0</string>
 	<key>column_bar_backgroundcolor说明</key>
 	<string>栏目条背景颜色</string>
 	<key>column_bar_backgroundcolor</key>
-	<string>19,183,246</string>
+	<string>255,255,255</string>
 	<key>column_edit_backgroundcolor说明</key>
 	<string>栏目编辑按钮背景色</string>
 	<key>column_edit_backgroundcolor</key>
-	<string>19,183,246</string>
+	<string>255,255,255</string>
 	<key>column_all_color说明</key>
 	<string>全局颜色（色调三色值）19,183,246</string>
 	<key>column_all_color</key>
-	<string>19,183,246</string>
+	<string>204,0,0</string>
 	<key>column_diselect_imagecolor说明</key>
 	<string>栏目条的栏目是图片时，未选中时的图片颜色（默认灰色123,123,123）</string>
 	<key>column_diselect_imagecolor</key>

@@ -49,6 +49,7 @@
         self.stylePageControl.numberOfPages = [self pagesNumber];
         self.stylePageControl.currentPage = 0;
         [self addSubview:self.stylePageControl];
+       
         [self bringSubviewToFront:self.stylePageControl];
         
         self.userInteractionEnabled = YES;

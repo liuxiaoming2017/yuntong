@@ -166,16 +166,26 @@
     __weak __typeof (self)weakSelf = self;
     [request setCompletionBlock:^(id data) {
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers  error:nil];
-        NSNumber *commentCount = dict[@"countDiscuss"];
-        NSNumber *greatCount = dict[@"countPraise"];
-        article.commentCount = [commentCount stringValue];
-        article.greatCount = [greatCount stringValue];
+        id commentCount = dict[@"countDiscuss"];
+        id greatCount = dict[@"countPraise"];
+        if([commentCount isKindOfClass:[NSString class]]){
+            article.commentCount = commentCount;
+        }else{
+            article.commentCount = [commentCount stringValue];
+        }
+        if([greatCount isKindOfClass:[NSString class]]){
+            article.greatCount = greatCount;
+        }else{
+            article.greatCount = [greatCount stringValue];
+        }
         
-        [weakSelf setupToolUI];
+        //[weakSelf setupToolUI];
     }];
     [request setFailedBlock:^(NSError *error) {
         [Global showTip:NSLocalizedString(@"加载失败，请检查网络",nil)];
+        
     }];
+    [self setupToolUI];
     [request startAsynchronous];
 }
 

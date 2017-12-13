@@ -91,13 +91,11 @@
         scrollView.showsVerticalScrollIndicator = NO;
         scrollView.showsHorizontalScrollIndicator = NO;
         scrollView.userInteractionEnabled = YES;
-        
         [self addSubview:scrollView];
         
         UILabel *lineLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, [ColumnBarConfig sharedColumnBarConfig].columnBtnHeight-1, kSWidth, 1)];
         lineLabel.backgroundColor = [Global navigationLineColor];
         [self addSubview:lineLabel];
-        
         lastSelectIndex = -1;
     }
     return self;
@@ -300,6 +298,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)inScrollView
 {
+    
 }
 
 //左右切换栏目时，设置导航条的对应按钮为选中

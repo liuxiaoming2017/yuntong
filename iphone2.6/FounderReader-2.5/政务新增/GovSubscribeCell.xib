@@ -41,7 +41,7 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wd-pH-f6r">
                         <rect key="frame" x="278" y="27" width="29" height="29"/>
-                        <state key="normal" image="login_country"/>
+                        <state key="normal" image="order"/>
                         <connections>
                             <action selector="subscribtAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Voi-wi-Fe3"/>
                         </connections>
@@ -79,7 +79,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="login_country" width="29" height="29"/>
         <image name="login_share" width="50" height="50"/>
+        <image name="order" width="22" height="22"/>
     </resources>
 </document>

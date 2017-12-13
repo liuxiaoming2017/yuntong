@@ -5,9 +5,9 @@
 	<key>server_if</key>
 	<string>http://116.62.154.230:8080</string>
 	<key>ss_id_说明</key>
-	<string>客户id  新空云正式：xy    测试：xkycs  宜宾日报：ybrb</string>
+	<string>客户id  新空云正式：xy    测试：xkycs  检查日报：46</string>
 	<key>ss_id</key>
-	<string>45</string>
+	<string>46</string>
 	<key>has_startHelpPage</key>
 	<false/>
 	<key>tabBarPersonalCenterIcon说明</key>

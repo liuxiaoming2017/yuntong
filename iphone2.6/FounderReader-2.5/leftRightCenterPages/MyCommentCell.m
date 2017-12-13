@@ -75,7 +75,7 @@
         //原文
         self.title = [[UILabel alloc]init];
         self.title.font = [UIFont systemFontOfSize:11*proportion];
-        if ((NSNull *)model.title != [NSNull null]) {
+        if ((NSNull *)model.title != [NSNull null]&&model.title!=nil) {
              NSString *content = [@"原文:" stringByAppendingString:model.title];
             self.title.text = content;
         }

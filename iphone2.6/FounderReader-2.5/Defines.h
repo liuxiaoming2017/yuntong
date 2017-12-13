@@ -59,6 +59,7 @@
 #endif
 
 #define iOS8 [[UIDevice currentDevice].systemVersion floatValue] > 8.0 ? 1 : 0
+#define iOS9 [[UIDevice currentDevice].systemVersion floatValue] > 9.0 ? 1 : 0
 //iphone5
 //#ifndef IS_IPHONE
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)

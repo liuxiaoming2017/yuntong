@@ -105,11 +105,19 @@
 
 - (void)loadUrl:(NSString *)urlString
 {
-    urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    if(iOS9){
+        urlString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+    }else{
+        urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    }
     NSString *filePath = [cacheDirPath() stringByAppendingPathComponent:@"www/html/article.html"];
     NSURL *url = [NSURL URLWithString:filePath];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:request];
+    //NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    //[webView loadRequest:request];
+    NSString *str = @"<head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" type=\"text/css\" href=\"../css/article.css\"><script type=\"text/javascript\" src=\"../js/article.js\"></script></head>";
+    self.contentStr=[str stringByAppendingString:self.contentStr];
+    //NSLog(@"content:%@",self.contentStr);
+    [webView loadHTMLString:self.contentStr baseURL:nil];
 }
 
 - (void)showHudView
@@ -129,21 +137,21 @@
 - (void)reload
 {
     webView.hidden = YES;
-    
-    NSString *path = [self templatePath];
-    if (!isFileExists(path)) {
-        [Global showTip:NSLocalizedString(@"正在下载模板，请稍等！",nil)];
-        [appDelegate() loadHTMLTemplate:^(NSNumber *success){
-            if([success boolValue])
-                [self loadContent];
-            else{
-                [Global showWebErrorView:self];
-            }
-        }];
-    }
-    else{
-        [self loadContent];
-    }
+    [self loadContent];
+//    NSString *path = [self templatePath];
+//    if (!isFileExists(path)) {
+//        [Global showTip:NSLocalizedString(@"正在下载模板，请稍等！",nil)];
+//        [appDelegate() loadHTMLTemplate:^(NSNumber *success){
+//            if([success boolValue])
+//                [self loadContent];
+//            else{
+//                [Global showWebErrorView:self];
+//            }
+//        }];
+//    }
+//    else{
+//        [self loadContent];
+//    }
 }
 
 #pragma mark 下载文章内容
@@ -825,10 +833,10 @@
         [self addSpeakView];
     }
     
-   // NSString *headerStr = @"document.getElementsByTagName('p')[0].innerText = '测试文字';";
-    //NSString *str1 = [NSString stringWithFormat:@"document.getElementsByTagName('p')[0].innerText = '%@';",self.contentStr];
-    NSString *str1 = [NSString stringWithFormat:@"document.body.innerText = '%@';",self.contentStr];
-    [webView stringByEvaluatingJavaScriptFromString:str1];
+    //NSString *str1 = [NSString stringWithFormat:@"document.body.innerHTML = '%@'",self.contentStr];
+    //NSString *str1 = [NSString stringWithFormat:@"document.write('%@')",self.contentStr];
+//    [webView stringByEvaluatingJavaScriptFromString:str1];
+//    [webView stopLoading];
     
 }
 

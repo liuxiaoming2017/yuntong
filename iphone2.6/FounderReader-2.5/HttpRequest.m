@@ -15,7 +15,7 @@
 @interface HttpRequest ()
 
 @property (strong, nonatomic) NSURLConnection *URLConnection;
-
+@property (strong, nonatomic) NSURLSession *URLSession;
 @end
 
 @implementation HttpRequest

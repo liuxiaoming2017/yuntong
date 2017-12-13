@@ -9,5 +9,6 @@
 #import "ChannelPageController.h"
 
 @interface GovSubscribeController : UIViewController
-
+@property (nonatomic,strong) NSMutableArray *mySubscribeArr;
+- (id)initWithMySubscribeArr:(NSMutableArray *)arr;
 @end

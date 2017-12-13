@@ -11,6 +11,11 @@
 #import "GovSubLeftCell.h"
 #import "SearchToolBarView.h"
 #import "GovSubTypeViewController.h"
+#import "ColumnRequest.h"
+#import "Column.h"
+#import "CommentRequest.h"
+#import "FDServiseColumnRequest.h"
+#import "UserAccountDefine.h"
 
 static NSString *leftIdentifier = @"leftIdentifier";
 static NSString *rightIdentifier = @"rightIdentifier";
@@ -21,10 +26,23 @@ static NSString *rightIdentifier = @"rightIdentifier";
 @property(nonatomic,strong)UITableView *leftTableView;
 @property(nonatomic,strong)UITableView *rightTableView;
 @property (nonatomic,assign) NSInteger leftLastIndexPath;
+@property(nonatomic,strong) NSArray *subscribesArr;
+
+
 
 @end
 
 @implementation GovSubscribeController
+
+- (id)initWithMySubscribeArr:(NSMutableArray *)arr
+{
+    self = [super init];
+    if(self){
+        self.mySubscribeArr = [NSMutableArray arrayWithCapacity:0];
+        self.mySubscribeArr = arr;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -76,7 +94,7 @@ static NSString *rightIdentifier = @"rightIdentifier";
     //右边表视图
     self.rightTableView = [[UITableView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(middleImg.frame), self.leftTableView.frame.origin.y, kSWidth-CGRectGetMaxX(middleImg.frame), self.leftTableView.frame.size.height) style:UITableViewStylePlain];
     self.rightTableView.backgroundView=nil;
-    self.rightTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+ self.rightTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     self.rightTableView.backgroundColor=[UIColor clearColor];
     self.rightTableView.dataSource=self;
     self.rightTableView.delegate=self;
@@ -84,7 +102,33 @@ static NSString *rightIdentifier = @"rightIdentifier";
     [self.rightTableView registerNib:[UINib nibWithNibName:@"GovSubscribeCell" bundle:nil] forCellReuseIdentifier:rightIdentifier];
     [self.view addSubview:self.rightTableView];
     
+    self.subscribesArr = [[NSArray alloc] init];
+    self.view.backgroundColor=[UIColor whiteColor];
+    [self requestSubscribes];
+    
 }
+
+
+
+#pragma mark - 获取所有订阅栏目
+- (void)requestSubscribes
+{
+    __weak typeof(self) weakSelf = self;
+    ColumnRequest *request = [ColumnRequest govAffairRequestWithSid:@"getSubscribes"];
+    [request setCompletionBlock:^(id data) {
+       NSArray *columns = [Column columnsFromArray:[data objectForKey:@"list"]];
+        weakSelf.subscribesArr = columns;
+        [weakSelf.rightTableView reloadData];
+        
+    }];
+    [request setFailedBlock:^(NSError *error) {
+        
+    }];
+    [request startAsynchronous];
+    
+}
+
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -99,9 +143,9 @@ static NSString *rightIdentifier = @"rightIdentifier";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if(tableView==self.leftTableView){
-        return 3;
+        return 1;
     }else if (tableView == self.rightTableView){
-        return 16;
+        return self.subscribesArr.count;
     }
     return 0;
 }
@@ -127,7 +171,18 @@ static NSString *rightIdentifier = @"rightIdentifier";
             cell2 = [[GovSubscribeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rightIdentifier];
             
         }
+        Column *article = nil;
+        article = [self.subscribesArr objectAtIndex:indexPath.row];
+        [cell2 initWithCell:article];
         cell2.delegate=self;
+        
+        for(NSDictionary *dic in self.mySubscribeArr){
+            if([article.columnName isEqualToString:[dic objectForKey:@"columnName"]]){
+                cell2.subscribeBtn.selected=YES;
+                continue;
+            }
+        }
+        
         return cell2;
     }
     
@@ -152,14 +207,52 @@ static NSString *rightIdentifier = @"rightIdentifier";
 -(void)buttonClickCell:(UITableViewCell *)tableViewCell withBool:(BOOL)selected
 {
     NSIndexPath *indexPath = [self.rightTableView indexPathForCell:tableViewCell];
-    //GovSubscribeCell *cell = (GovSubscribeCell *)tableViewCell;
-    NSLog(@"haha:%ld",indexPath.row);
-    if(selected){
-        [Global showCustomMessage:@"您已成功定制此栏目"];
+    GovSubscribeCell *cell = (GovSubscribeCell *)tableViewCell;
+    Column *column = [self.subscribesArr objectAtIndex:indexPath.row];
+    //__weak typeof(self) weakSelf = self;
+    if(!cell.subscribeBtn.selected){
+        NSString *url = [NSString stringWithFormat:@"%@/api/%@", [AppConfig sharedAppConfig].serverIf,@"submitSubscribe"];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+        request.HTTPMethod = @"POST";
+        request.HTTPBody = [[NSString stringWithFormat:@"cid=%d&uid=%d",column.columnId,[[[NSUserDefaults standardUserDefaults] objectForKey:KuserAccountUserId] intValue]] dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSURLSession *session = [NSURLSession sharedSession];
+        // 由于要先对request先行处理,我们通过request初始化task
+        NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+              NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+            if([[dic objectForKey:@"success"] integerValue] == 1){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    cell.subscribeBtn.selected=!cell.subscribeBtn.selected;
+                    [Global showCustomMessage:@"您已成功定制此栏目"];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"submitSubscribe" object:self];
+                });
+                
+            }
+         }];
+        [task resume];
+        
     }else{
-        [Global showCustomMessage:@"您已成功取消定制此栏目"];
+        NSString *url = [NSString stringWithFormat:@"%@/api/%@", [AppConfig sharedAppConfig].serverIf,@"cancelSubscribe"];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+        request.HTTPMethod = @"POST";
+        request.HTTPBody = [[NSString stringWithFormat:@"cid=%d&uid=%d",column.columnId,[[[NSUserDefaults standardUserDefaults] objectForKey:KuserAccountUserId] intValue]] dataUsingEncoding:NSUTF8StringEncoding];
+        NSURLSession *session = [NSURLSession sharedSession];
+        NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+            if([[dic objectForKey:@"success"] integerValue] == 1){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    cell.subscribeBtn.selected=!cell.subscribeBtn.selected;
+                    [Global showCustomMessage:@"您已成功取消定制此栏目"];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"cancelSubscribe" object:self];
+                });
+            }
+        }];
+        [task resume];
     }
+   
 }
+
+
 
 -(void)viewWillAppear:(BOOL)animated
 {

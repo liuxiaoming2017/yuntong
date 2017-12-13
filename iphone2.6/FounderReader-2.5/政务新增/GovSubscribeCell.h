@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Column;
 @class GovSubscribeCell;
 @protocol GovSubscribeCellDelegate<NSObject>
 -(void)buttonClickCell:(UITableViewCell *)tableViewCell withBool:(BOOL)selected;
@@ -17,4 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *subscribeCountLabel;
 @property (weak, nonatomic) IBOutlet UIButton *subscribeBtn;
 @property (weak, nonatomic) id<GovSubscribeCellDelegate> delegate;
+
+- (void)initWithCell:(Column *)article;
+
 @end

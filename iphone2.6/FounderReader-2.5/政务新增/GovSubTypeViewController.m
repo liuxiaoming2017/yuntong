@@ -11,18 +11,36 @@
 #import "Article.h"
 #import "MiddleCell.h"
 #import "NewsCellUtil.h"
+#import "VideoCell.h"
+#import "UserAccountDefine.h"
 
 @interface GovSubTypeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)NSArray *dataArr;
+@property(nonatomic,copy) NSString *titleStr;
+@property(nonatomic,assign) BOOL isSelected;
+@property(nonatomic,strong) UIButton *navRightBtn;
+@property(nonatomic,strong) NSDictionary *columnDic;
 @end
 
 @implementation GovSubTypeViewController
+
+- (id)initWithDataArr:(NSArray *)arr withDic:(NSDictionary *)dic withSelected:(BOOL)selected
+{
+    self = [super init];
+    if(self){
+        self.dataArr = arr;
+        self.columnDic=dic;
+        self.isSelected = selected;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupNav];
     [self initUI];
-    [self requestData];
+    [self.tableView reloadData];
+   // [self requestData];
 }
 
 - (void)requestData
@@ -40,7 +58,7 @@
 
 - (void)initUI
 {
-    navTitleLabel.text=@"省水利厅";
+    navTitleLabel.text=[self.columnDic objectForKey:@"columnName"];
     //表视图
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kSWidth, kSHeight-20-44) style:UITableViewStylePlain];
     self.tableView.delegate=self;
@@ -52,7 +70,6 @@
 - (void)setupNav
 {
     
-    self.title = NSLocalizedString(@"省科技局",nil);
     // 设置导航默认标题的颜色及字体大小
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [ColorStyleConfig sharedColorStyleConfig].navbar_titlecolor_didselect,
                                                                     NSFontAttributeName : [UIFont boldSystemFontOfSize:18]};
@@ -67,12 +84,12 @@
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:preBtn];
     self.navigationItem.leftBarButtonItem = leftItem;
     
-    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [rightBtn setImage:[UIImage imageNamed:@"login_country"] forState:UIControlStateNormal];
-    [rightBtn setImage:[UIImage imageNamed:@"login_user"] forState:UIControlStateSelected];
-    [rightBtn addTarget:self action:@selector(rightAction:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
+    self.navRightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.navRightBtn setImage:[UIImage imageNamed:@"order"] forState:UIControlStateNormal];
+    [self.navRightBtn setImage:[UIImage imageNamed:@"ordered"] forState:UIControlStateSelected];
+    [self.navRightBtn addTarget:self action:@selector(rightAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.navRightBtn.selected=self.isSelected;
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithCustomView:self.navRightBtn];
     self.navigationItem.rightBarButtonItem = rightItem;
     
 }
@@ -89,10 +106,15 @@
         
     }
     Article *article = nil;
-    if(self.dataArr.count>indexPath.row){
-        article = [self.dataArr objectAtIndex:0];
+    NSArray *articleArr = [Article articlesFromArray:self.dataArr];
+    if(articleArr.count>indexPath.row){
+        article = [articleArr objectAtIndex:indexPath.row];
         cell=[NewsCellUtil getNewsCell:article in:tableView];
-        
+        if([cell isKindOfClass:[VideoCell class]]){
+            VideoCell *cell2 = (VideoCell *)cell;
+            cell2.row=indexPath.row;
+            cell2.delegate=self;
+        }
     }
     
     return cell;
@@ -100,13 +122,11 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
+    NSArray *articleArr = [Article articlesFromArray:self.dataArr];
     Article *article = nil;
-    if (self.dataArr.count > indexPath.row) {
-        article = [self.dataArr objectAtIndex:indexPath.row];
+    if (articleArr.count > indexPath.row) {
+        article = [articleArr objectAtIndex:indexPath.row];
     }
-    
     return [NewsCellUtil getNewsCellHeight:article];
 }
 
@@ -117,7 +137,8 @@
     
     Article *currentAricle = nil;
     if (self.dataArr.count > indexPath.row) {
-        currentAricle = [self.dataArr objectAtIndex:indexPath.row];
+        NSArray *articleArr = [Article articlesFromArray:self.dataArr];
+        currentAricle = [articleArr objectAtIndex:indexPath.row];
     }
     Column *column = [columns objectAtIndex:columnBar.selectedIndex];
     
@@ -131,7 +152,45 @@
 //订阅按钮
 - (void)rightAction:(UIButton *)button
 {
-    button.selected=!button.selected;
+    if(!button.selected){
+        NSString *url = [NSString stringWithFormat:@"%@/api/%@", [AppConfig sharedAppConfig].serverIf,@"submitSubscribe"];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+        request.HTTPMethod = @"POST";
+        request.HTTPBody = [[NSString stringWithFormat:@"cid=%d&uid=%d",[[self.columnDic objectForKey:@"columnID"]intValue],[[[NSUserDefaults standardUserDefaults] objectForKey:KuserAccountUserId] intValue]] dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSURLSession *session = [NSURLSession sharedSession];
+        // 由于要先对request先行处理,我们通过request初始化task
+        NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+            if([[dic objectForKey:@"success"] integerValue] == 1){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    button.selected=!button.selected;
+                    [Global showCustomMessage:@"您已成功定制此栏目"];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"submitSubscribe" object:self];
+                });
+                
+            }
+        }];
+        [task resume];
+        
+    }else{
+        NSString *url = [NSString stringWithFormat:@"%@/api/%@", [AppConfig sharedAppConfig].serverIf,@"cancelSubscribe"];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+        request.HTTPMethod = @"POST";
+        request.HTTPBody = [[NSString stringWithFormat:@"cid=%d&uid=%d",[[self.columnDic objectForKey:@"columnID"]intValue],[[[NSUserDefaults standardUserDefaults] objectForKey:KuserAccountUserId] intValue]] dataUsingEncoding:NSUTF8StringEncoding];
+        NSURLSession *session = [NSURLSession sharedSession];
+        NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+            if([[dic objectForKey:@"success"] integerValue] == 1){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    button.selected=!button.selected;
+                    [Global showCustomMessage:@"您已成功取消定制此栏目"];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"cancelSubscribe" object:self];
+                });
+            }
+        }];
+        [task resume];
+    }
 }
 
 - (void)goBack2

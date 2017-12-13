@@ -440,14 +440,17 @@
 - (BOOL)isPhoneNumber
 {
     if ([NSString isNilOrEmpty:self.phoneTextField.text]) {
-        [UIAlertView showAlert:NSLocalizedString(@"您输入的手机号为空",nil)];
+        //[UIAlertView showAlert:NSLocalizedString(@"您输入的手机号为空",nil)];
+        [self showAlwetController:@"您输入的手机号为空"];
         return NO;
     } else if (self.phoneTextField.text.length > 11){
-        [UIAlertView showAlert:NSLocalizedString(@"请输入有效的手机号",nil)];
+        //[UIAlertView showAlert:NSLocalizedString(@"请输入有效的手机号",nil)];
+        [self showAlwetController:@"请输入有效的手机号"];
         return NO;
     } else if(self.phoneTextField.text.length == 11){
-        if (![self.phoneTextField.text isMatchedByRegex:kPhoneNumberRegExp]) {
-            [UIAlertView showAlert:NSLocalizedString(@"请输入有效的手机号",nil)];
+        NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",kPhoneNumberRegExp];
+        if(![phoneTest evaluateWithObject:self.phoneTextField.text]){
+            [self showAlwetController:@"请输入有效的手机号"];
             return NO;
         }
     }
@@ -461,14 +464,16 @@
 - (BOOL)isPhoneNumberStyle
 {
     if ([NSString isNilOrEmpty:self.phoneTextField.text]) {
-        [UIAlertView showAlert:NSLocalizedString(@"您输入的手机号/邮箱为空",nil)];
+        
+        [self showAlwetController:@"您输入的手机号/邮箱为空"];
         return NO;
     }
     else
     {
         if ([self.phoneTextField.text rangeOfString:@"@"].location != NSNotFound) {
             if (!([self.phoneTextField.text rangeOfString:@".com"].location != NSNotFound || [self.phoneTextField.text rangeOfString:@".cn"].location != NSNotFound)) {
-                [UIAlertView showAlert:NSLocalizedString(@"请输入有效的邮箱",nil)];
+                //[UIAlertView showAlert:NSLocalizedString(@"请输入有效的邮箱",nil)];
+                [self showAlwetController:@"请输入有效的邮箱"];
                 return NO;
             }
         }
@@ -495,7 +500,8 @@
         }
         else if([NSString isNilOrEmpty:self.PWTextField.text])
         {
-            [UIAlertView showAlert:NSLocalizedString(@"您输入的密码为空",nil)];
+            
+            [self showAlwetController:@"您输入的密码为空"];
             return;
         }
         
@@ -508,7 +514,8 @@
         [self userLoginRequest];
     }
     else {
-        [UIAlertView showAlert:NSLocalizedString(@"您还没有同意用户协议",nil)];
+        
+        [self showAlwetController:@"您还没有同意用户协议"];
     }
 }
 
@@ -548,6 +555,11 @@
             if (!uid) {
                 uid = phoneNumber;
             }
+            
+//            NSString *sid = [NSString stringWithFormat:@"%d",[[dict objectForKey:@"sid"] intValue]];
+//            if(!sid){
+//                sid=@"0";
+//            }
             
             NSString *nickname = [dict objectForKey:@"nickName"];
             if (!nickname){
@@ -615,7 +627,7 @@
             [[NSUserDefaults standardUserDefaults] setObject:scores forKey:[NSString stringWithFormat:@"%@%@",uid,KuserAccountMoneyStr]];
             [[NSUserDefaults standardUserDefaults] setObject:inviteCode forKey:KuserAccountInviteCode];
             
-            
+            // [[NSUserDefaults standardUserDefaults] setObject:sid forKey:KuserAccountUserSid];
             [[NSUserDefaults standardUserDefaults] setObject:birthday forKey:KuserAccountbirth];
             [[NSUserDefaults standardUserDefaults] setObject:sex forKey:KuserAccountsex];
             [[NSUserDefaults standardUserDefaults] setObject:region forKey:KuserAccountarea];
@@ -1004,6 +1016,16 @@
 {
     [self logIn:nil];
     return YES;
+}
+
+- (void)showAlwetController:(NSString *)str
+{
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:str message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alertVC addAction:cancleAction];
+    [self presentViewController:alertVC animated:YES completion:nil];
 }
 
 @end

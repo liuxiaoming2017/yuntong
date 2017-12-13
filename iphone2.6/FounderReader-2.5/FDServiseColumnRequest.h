@@ -16,4 +16,5 @@
 
 - (id)initWithParentColumnId:(int)parentColumnId;
 + (id)columnRequestWithParentColumnId:(int)parentColumnId;
+
 @end

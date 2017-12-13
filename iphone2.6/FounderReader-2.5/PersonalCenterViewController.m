@@ -36,7 +36,8 @@
 #import <UMMobClick/MobClick.h>
 
 #import "FZChangePhoneNumberController.h"
-
+#import "FavoritePageController.h"
+#import "MyCommentLIstController.h"
 #define pointScale 0.5
 
 @interface PersonalCenterViewController ()
@@ -642,6 +643,14 @@
             [self.view.superview.viewController presentViewController:[Global controllerToNav:vc] animated:YES completion:nil];
             return;
         }
+    }else if ([contrllerStr isEqualToString:@"FavoritePageController"]){
+        FavoritePageController *favc = [[FavoritePageController alloc]init];
+        [self.view.superview.viewController presentViewController:[Global controllerToNav:favc] animated:YES completion:nil];
+        return;
+    }else if ([contrllerStr isEqualToString:@"MyCommentLIstController"]){
+        MyCommentLIstController *comvc = [[MyCommentLIstController alloc] init];
+        [self.view.superview.viewController presentViewController:[Global controllerToNav:comvc] animated:YES completion:nil];
+        return;
     }
     else
     {

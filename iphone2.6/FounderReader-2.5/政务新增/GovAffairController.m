@@ -12,11 +12,19 @@
 #import "Article.h"
 #import "MiddleCell.h"
 #import "NewsCellUtil.h"
+#import "ColumnRequest.h"
+#import "VideoCell.h"
+#import "UIImageView+WebCache.h"
+#import "NewsListConfig.h"
 
 @interface GovAffairController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong) UITableView *tableView;
-@property(nonatomic,strong) NSArray *dadaArr;
+@property(nonatomic,strong) NSArray *dataArr;
+@property(nonatomic,strong) NSMutableArray *articleArr;
+@property(nonatomic,strong) NSMutableArray *columnArr;
+@property(nonatomic,strong) UIImageView *noDataImg;
+@property(nonatomic,strong) UILabel *noDataLabel;
 @end
 
 @implementation GovAffairController
@@ -26,10 +34,21 @@
     [self initWithView];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    [self.columnArr removeAllObjects];
+    [self requestData];
+}
+
 - (void)initWithView
 {
     navTitleLabel.text=@"政务";
     self.moreButton.hidden=YES;
+    
+    self.articleArr = [NSMutableArray arrayWithCapacity:0];
+    self.columnArr = [NSMutableArray arrayWithCapacity:0];
+    
     UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kSWidth, 40)];
     UIImageView *imagV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 39, kSWidth, 1)];
     imagV.backgroundColor = [UIColor redColor];
@@ -63,23 +82,62 @@
     self.tableView.dataSource=self;
     self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
+    self.tableView.backgroundColor=[UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1.0];
+    self.tableView.bounces=YES;
     
-    [self requestData];
+    [self noDataShow];
+    
+    //[self requestData];
     //[self loadArticlesWithColumnId:116 lastFileId:0 rowNumber:0];
     
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(submitSubscribeSuccess) name:@"submitSubscribe" object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cancelSubscribeSuccess) name:@"cancelSubscribe" object:nil];
 }
 
+#pragma mark - 获取我的订阅
 - (void)requestData
 {
-    ArticleRequest *request = [ArticleRequest articleRequestWithColumnId:116 lastFileId:0 count:20 rowNumber:0];
-    [request setCompletionBlock:^(NSArray *arr) {
-        self.dadaArr=arr;
-        [self.tableView reloadData];
+    self.noDataImg.hidden=YES;
+    self.noDataLabel.hidden=YES;
+    __weak typeof(self) weakSelf = self;
+    ColumnRequest *request = [ColumnRequest govAffairRequestWithuid:@"getMySubAndArticles"];
+    [request setCompletionBlock:^(id data) {
+        weakSelf.dataArr=[data objectForKey:@"list"];
+        for(NSInteger i=0;i<weakSelf.dataArr.count;i++){
+            NSDictionary *dic = [[self.dataArr objectAtIndex:i] objectForKey:@"column"];
+            [self.columnArr addObject:dic];
+        }
+        [weakSelf.tableView reloadData];
+        if(weakSelf.dataArr.count==0){
+            self.noDataImg.hidden=NO;
+            self.noDataLabel.hidden=NO;
+        }
     }];
     [request setFailedBlock:^(NSError *error) {
-        
+        [weakSelf.tableView reloadData];
+        self.noDataImg.hidden=NO;
+        self.noDataLabel.hidden=NO;
     }];
     [request startAsynchronous];
+}
+
+-(void)noDataShow
+{
+    self.noDataImg = [[UIImageView alloc]init];
+    self.noDataImg.frame = CGRectMake(kSWidth * 0.5, 160, 50*proportion, 50*proportion);
+    CGPoint poin = CGPointMake(kSWidth * 0.5, 160*proportion + 64);
+    self.noDataImg.center = poin;
+    self.noDataImg.image = [UIImage imageNamed:@"holdIMG"];
+    [self.view addSubview:self.noDataImg];
+    self.noDataImg.hidden=YES;
+    
+    self.noDataLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.noDataImg.frame) + 20, kSWidth, 20)];
+    self.noDataLabel.font = [UIFont systemFontOfSize:[NewsListConfig sharedListConfig].middleCellTitleFontSize];
+    self.noDataLabel.text = NSLocalizedString(@"您还没有订阅消息哟!",nil);
+    self.noDataLabel.textAlignment = NSTextAlignmentCenter;
+    self.noDataLabel.textColor = [UIColor grayColor];
+    [self.view addSubview:self.noDataLabel];
+    self.noDataLabel.hidden=YES;
 }
 
 - (void)testScrollView:(UIScrollView *)scrollview{
@@ -91,13 +149,23 @@
         } else if (scrollview.contentOffset.y>=sectionHeaderHeight) {
             scrollview.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
         }
+        //禁止下拉
+        CGPoint offset = self.tableView.contentOffset;
+        if (offset.y <= 0) {
+            offset.y = 0;
+        }
+        self.tableView.contentOffset = offset;
     }
 
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 6;
+    if(self.dataArr.count==0){
+        return 1;
+    }else{
+        return self.dataArr.count+1;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -123,6 +191,9 @@
     [sectionV addSubview:button];
     return sectionV;
     }else{
+        
+        NSDictionary *dic = [self.columnArr objectAtIndex:section-1];
+        
         UIView *sectionV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kSWidth, 55)];
         sectionV.backgroundColor=[UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
         sectionV.tag = 100+section;
@@ -133,13 +204,14 @@
         
         UIImageView *imgV = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10+5, 30, 30)];
         imgV.contentMode=UIViewContentModeScaleToFill;
-        imgV.image=[UIImage imageNamed:@"my_shangchensmall"];
+        [imgV sd_setImageWithURL:[NSURL URLWithString:[dic objectForKey:@"smallIconUrl"]] placeholderImage:[UIImage imageNamed:@"my_shangchensmall"]];
+        
         
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(imgV.frame), 15+5, 100, 20)];
         titleLabel.textAlignment=NSTextAlignmentLeft;
         titleLabel.font=[UIFont systemFontOfSize:13];
         titleLabel.textColor=[UIColor blackColor];
-        titleLabel.text=@"省水利厅";
+        titleLabel.text=[dic objectForKey:@"columnName"];
         
         UIImageView *rightImg = [[UIImageView alloc] initWithFrame:CGRectMake(kSWidth-30, 10+5, 30, 30)];
         rightImg.contentMode=UIViewContentModeScaleToFill;
@@ -167,21 +239,35 @@
         return 0;
     }
     else{
-        return 3;
+        if(self.dataArr.count>0){
+        NSArray *arr = [[self.dataArr objectAtIndex:section-1]objectForKey:@"list"];
+        if(arr.count>3){
+            return 3;
+        }else{
+            return arr.count;
+        }
+    }
+        return 0;
     }
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    NSArray *arr = [[self.dataArr objectAtIndex:indexPath.section-1]objectForKey:@"list"];
+    NSArray *articleArr = [Article articlesFromArray:arr];
     if(cell==nil){
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
         
     }
     Article *article = nil;
-    if(self.dadaArr.count>indexPath.row){
-        article = [self.dadaArr objectAtIndex:0];
+    if(articleArr.count>indexPath.row){
+        article = [articleArr objectAtIndex:indexPath.row];
         cell=[NewsCellUtil getNewsCell:article in:tableView];
-        
+        if([cell isKindOfClass:[VideoCell class]]){
+            VideoCell *cell2 = (VideoCell *)cell;
+            cell2.row=indexPath.row;
+            cell2.delegate=self;
+        }
     }
 
     return cell;
@@ -190,12 +276,12 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    
+    NSArray *arr = [[self.dataArr objectAtIndex:indexPath.section-1]objectForKey:@"list"];
+    NSArray *articleArr = [Article articlesFromArray:arr];
     Article *article = nil;
-    if (self.dadaArr.count > indexPath.row) {
-        article = [self.dadaArr objectAtIndex:indexPath.row];
+    if (articleArr.count > indexPath.row) {
+        article = [articleArr objectAtIndex:indexPath.row];
     }
-    
     return [NewsCellUtil getNewsCellHeight:article];
 }
 
@@ -203,10 +289,11 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    
-        Article *currentAricle = nil;
-        if (self.dadaArr.count > indexPath.row) {
-            currentAricle = [self.dadaArr objectAtIndex:indexPath.row];
+       NSArray *arr = [[self.dataArr objectAtIndex:indexPath.section-1]objectForKey:@"list"];
+       NSArray *articleArr = [Article articlesFromArray:arr];
+       Article *currentAricle = nil;
+        if (articleArr.count > indexPath.row) {
+            currentAricle = [articleArr objectAtIndex:indexPath.row];
         }
         Column *column = [columns objectAtIndex:columnBar.selectedIndex];
     
@@ -219,7 +306,8 @@
 
 - (void)buttonAction
 {
-    GovSubscribeController *subVC = [[GovSubscribeController alloc]init];
+    GovSubscribeController *subVC = [[GovSubscribeController alloc]initWithMySubscribeArr:self.columnArr];
+    
     if(self.navigationController){
         [self.navigationController pushViewController:subVC animated:YES];
     }else{
@@ -251,7 +339,7 @@
     UIView *sectionV = tapGesture.view;
     NSInteger sectionTag = sectionV.tag-100;
     
-    GovSubTypeViewController *govSubTypeVC = [[GovSubTypeViewController alloc] init];
+    GovSubTypeViewController *govSubTypeVC = [[GovSubTypeViewController alloc] initWithDataArr:[[self.dataArr objectAtIndex:sectionTag-1]objectForKey:@"list"] withDic:[self.columnArr objectAtIndex:sectionTag-1] withSelected:YES];
     [self.navigationController pushViewController:govSubTypeVC animated:YES];
 }
 

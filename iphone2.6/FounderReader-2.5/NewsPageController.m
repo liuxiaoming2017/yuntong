@@ -193,28 +193,41 @@
 #pragma mark - View implementation
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
     self.lastOrCurrentPlayIndex = -1;
     //注册点击全屏通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fullScreenBtnClick:) name:@"fullScreenBtnClickNotice" object:nil];
     
-    _headWhiteView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kSWidth, self.listTableViewY - 5)];
+    _headWhiteView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kSWidth, self.listTableViewY+20 )];
+    
     if (self.columnHeaderHeight) {
         UIImage *backImage = [UIImage imageNamed:@"column_bar_header"];
         CGFloat backWidth = self.columnHeaderHeight * backImage.size.width/backImage.size.height;
+        
+        
         UIImageView *backView = [[UIImageView alloc] initWithFrame:CGRectMake((kSWidth-backWidth)/2.0f, kStatusBarHeight, backWidth, self.columnHeaderHeight)];
-        backView.image = backImage;
+        //后期修改
+        UILabel *label = [[UILabel alloc] initWithFrame:backView.frame];
+        label.text=parentColumn.columnName;
+        label.font = [UIFont systemFontOfSize:18];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.backgroundColor = [UIColor clearColor];
+        label.textColor = [ColorStyleConfig sharedColorStyleConfig].navbar_titlecolor_selected;
+        label.textColor=[UIColor whiteColor];
+        //backView.image = backImage;
         backView.userInteractionEnabled = YES;
         [_headWhiteView addSubview:backView];
+        [_headWhiteView addSubview:label];
     }
     
     if (self.isFirstNewsVC) {
         _headWhiteView.backgroundColor = [ColumnBarConfig sharedColumnBarConfig].columnBKColor;
+        
     } else {
         _headWhiteView.backgroundColor = [ColorStyleConfig sharedColorStyleConfig].nav_bar_color;
+        
     }
     [self.view addSubview:_headWhiteView];
-    
+    //NSLog(@"head:%@",NSStringFromCGRect(_headWhiteView.frame));
     [self addTopColumnBar];
     
     self.groupImageConfigs = [GroupImageConfig groupImageConfigs];
@@ -436,7 +449,11 @@
     imageviewSearch.contentMode = UIViewContentModeScaleToFill;
     imageviewSearch.image = [UIImage imageNamed:@"icon-nav-search"];
     [searchView addSubview:imageviewSearch];
-    searchView.hidden = YES;
+    if(self.isFirstNewsVC){
+        searchView.hidden = NO;
+    }else{
+        searchView.hidden = YES;
+    }
     [_headWhiteView addSubview:searchView];
     if (self.isFirstNewsVC) {
         if(self.columnHeaderHeight > 0){
@@ -447,6 +464,7 @@
                 //顶部有导航栏＋搜索的情况
                 moreView.center = CGPointMake(moreView.center.x, columnBar.center.y);
                 moreView.backgroundColor = [ColumnBarConfig sharedColumnBarConfig].column_edit_backgroundColor;
+                
                 searchView.hidden = NO;
             }
             if ([AppStartInfo sharedAppStartInfo].ucTabisShow) {
@@ -624,6 +642,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"frame:%@",NSStringFromCGRect(tableView.frame));
     if (self.articles.count>0) {
         if (hasMore) {
             return self.articles.count+1;
@@ -647,7 +666,7 @@
             cell = [[TableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"zeroCell"];
         }
     }
-    else if (indexPath.row == articles.count){\
+    else if (indexPath.row == articles.count){
         cell = [tableView dequeueReusableCellWithIdentifier:@"MoreCell"];
         if (!cell){
             cell = [[MoreCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MoreCell"];

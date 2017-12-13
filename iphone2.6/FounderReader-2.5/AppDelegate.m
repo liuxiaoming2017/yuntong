@@ -102,7 +102,7 @@ bool isAppNormalStart()
     NSArray *array = [NSArray arrayWithArray:self.channels];
     for (int i = 0; i < array.count; i++) {
         Column *channel = array[i];
-        if (channel.showcolumn) {
+        if (channel.showcolumn||(![channel.columnName isEqualToString:@"检察日报"]&&![channel.columnName isEqualToString:@"检务大厅"]&&![channel.columnName isEqualToString:@"自媒体"])) {
             [self.channels removeObject:channel];
         }
     }
@@ -236,6 +236,8 @@ bool isAppNormalStart()
             if(imageNormal){
                 childVc.tabBarItem.image = [imageNormal imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
                 childVc.tabBarItem.selectedImage = [imagePress imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+                
+
             }else{
                 if ([AppStartInfo sharedAppStartInfo].ucTabisShow && [childVc.parentColumn.columnStyle isEqualToString:@"个人中心"]) {
                     childVc.tabBarItem.image = [[UIImage imageNamed:[AppConfig sharedAppConfig].tabBarPersonalCenterIcon_normal] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

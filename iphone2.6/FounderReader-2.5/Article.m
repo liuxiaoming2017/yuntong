@@ -261,7 +261,7 @@ static BOOL isPaper;
             article.groupImageUrl = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@", [dict objectForKey:@"pic1"],[dict objectForKey:@"pic2"],[dict objectForKey:@"pic3"],[NSString stringFromNil:[dict objectForKey:@"pic3"]],[NSString stringFromNil:[dict objectForKey:@"pic2"]],[NSString stringFromNil:[dict objectForKey:@"pic1"]]];
         }
         
-    if(![[dict objectForKey:@"countClick"] isKindOfClass:[NSNull class]]){
+    if(![[dict objectForKey:@"countClick"] isKindOfClass:[NSNull class]]&&[dict objectForKey:@"countClick"]!=nil){
         if ([[dict objectForKey:@"countClick"] isKindOfClass:[NSString class]])
         {
             article.readCount = [dict objectForKey:@"countClick"];
@@ -271,6 +271,7 @@ static BOOL isPaper;
             article.readCount = [[dict objectForKey:@"countClick"] stringValue];
         }
     }
+    if(![[dict objectForKey:@"countDiscuss"] isKindOfClass:[NSNull class]]&&[dict objectForKey:@"countDiscuss"]!=nil){
         if ([[dict objectForKey:@"countDiscuss"] isKindOfClass:[NSString class]])
         {
             article.commentCount = [dict objectForKey:@"countDiscuss"];
@@ -279,7 +280,8 @@ static BOOL isPaper;
         {
             article.commentCount = [[dict objectForKey:@"countDiscuss"] stringValue];
         }
-        
+    }
+    if(![[dict objectForKey:@"countPraise"] isKindOfClass:[NSNull class]]&&[dict objectForKey:@"countPraise"]!=nil){
         if ([[dict objectForKey:@"countPraise"] isKindOfClass:[NSString class]])
         {
             article.greatCount = [dict objectForKey:@"countPraise"];
@@ -288,7 +290,8 @@ static BOOL isPaper;
         {
             article.greatCount = [[dict objectForKey:@"countPraise"] stringValue];
         }
-        
+    }
+   if(![[dict objectForKey:@"picCount"] isKindOfClass:[NSNull class]]&&[dict objectForKey:@"picCount"]!=nil){
         if ([[dict objectForKey:@"picCount"] isKindOfClass:[NSString class]])
         {
             article.picCount = [dict objectForKey:@"picCount"];
@@ -297,6 +300,7 @@ static BOOL isPaper;
         {
             article.picCount = [[dict objectForKey:@"picCount"] stringValue];
         }
+     }
         article.shareCount = [dict objectForKey:@"countShare"];
         article.countShareClick = [dict objectForKey:@"countShareClick"];
         article.tag = [dict objectForKey:@"tag"];
@@ -389,6 +393,7 @@ static BOOL isPaper;
         //如果是组图，把组图和标题图存到组图url中，前三张为组图前三张图，后三张为标题大中小图
         article.groupImageUrl = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@", [dict objectForKey:@"pic0"],[dict objectForKey:@"pic1"],[dict objectForKey:@"pic2"],[NSString stringFromNil:[dict objectForKey:@"picBig"]],[NSString stringFromNil:[dict objectForKey:@"picMiddle"]],[NSString stringFromNil:[dict objectForKey:@"picSmall"]]];
     }
+ if(![[dict objectForKey:@"countClick"] isKindOfClass:[NSNull class]]){
     if ([[dict objectForKey:@"countClick"] isKindOfClass:[NSString class]])
     {
         article.readCount = [dict objectForKey:@"countClick"];
@@ -397,7 +402,8 @@ static BOOL isPaper;
     {
         article.readCount = [[dict objectForKey:@"countClick"] stringValue];
     }
-    
+ }
+    if(![[dict objectForKey:@"countDiscuss"] isKindOfClass:[NSNull class]]&&[dict objectForKey:@"countDiscuss"]!=nil){
     if ([[dict objectForKey:@"countDiscuss"] isKindOfClass:[NSString class]])
     {
         article.commentCount = [dict objectForKey:@"countDiscuss"];
@@ -406,7 +412,8 @@ static BOOL isPaper;
     {
         article.commentCount = [[dict objectForKey:@"countDiscuss"] stringValue];
     }
-    
+    }
+if(![[dict objectForKey:@"countPraise"] isKindOfClass:[NSNull class]]&&[dict objectForKey:@"countPraise"]!=nil){
     if ([[dict objectForKey:@"countPraise"] isKindOfClass:[NSString class]])
     {
         article.greatCount = [dict objectForKey:@"countPraise"];
@@ -415,8 +422,8 @@ static BOOL isPaper;
     {
         article.greatCount = [[dict objectForKey:@"countPraise"] stringValue];
     }
-    
-    
+}
+if(![[dict objectForKey:@"picCount"] isKindOfClass:[NSNull class]]&&[dict objectForKey:@"picCount"]!=nil){
     if ([[dict objectForKey:@"picCount"] isKindOfClass:[NSString class]])
     {
         article.picCount = [dict objectForKey:@"picCount"];
@@ -425,6 +432,7 @@ static BOOL isPaper;
     {
         article.picCount = [[dict objectForKey:@"picCount"] stringValue];
     }
+}
     article.shareCount = [dict objectForKey:@"countShare"];
     article.countShareClick = [dict objectForKey:@"countShareClick"];
     article.tag = [dict objectForKey:@"tag"];

@@ -107,6 +107,7 @@
     moreButton = [[UIImageView alloc] initWithFrame:CGRectMake(0, 3, 16, 16)];
     self.moreButton.image = [UIImage imageNamed:@"icon-edit"];
     self.moreButton.contentMode = UIViewContentModeScaleToFill;
+    self.moreButton.backgroundColor=[UIColor clearColor];
     [rightButton addSubview:self.moreButton];
    
     UITapGestureRecognizer *recognizer2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(moreClick)];

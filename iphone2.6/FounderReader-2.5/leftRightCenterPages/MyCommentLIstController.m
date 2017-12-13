@@ -138,7 +138,7 @@
     if (self.dataArray.count == 0) {
         return 0;
     }
-    return self.dataArray.count + self.hasMore;
+    return self.dataArray.count+self.hasMore;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)sender cellForRowAtIndexPath:(NSIndexPath *)indexPath

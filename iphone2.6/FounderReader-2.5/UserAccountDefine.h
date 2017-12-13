@@ -27,6 +27,7 @@
 #define KuserAccountssoCode             @"user_ssoCode"
 #define KuserAccountType                @"user_type"
 #define KuserAccountFullName            @"fullname"
+#define KuserAccountUserSid             @"login_userSid"
 #define ssoCid @"FSSOhmZDmUDWeXlyBYpCFvFZ6g=="
 #define ssoSecret @"FSSOSxqT3EnnM5DYENHy0liTwA=="
 

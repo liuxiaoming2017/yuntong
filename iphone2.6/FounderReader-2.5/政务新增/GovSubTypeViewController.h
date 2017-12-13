@@ -10,4 +10,5 @@
 
 @interface GovSubTypeViewController : ColumnBarPageController
 @property(nonatomic,strong) UITableView *tableView;
+- (id)initWithDataArr:(NSArray *)arr withDic:(NSDictionary *)dic withSelected:(BOOL)selected;
 @end

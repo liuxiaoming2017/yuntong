@@ -46,7 +46,7 @@
 
 @property (nonatomic, assign) CGPoint scrollViewStartPosPoint;
 @property (nonatomic, assign) NSInteger scrollDirection;
-
+@property (nonatomic, assign) BOOL isVer;//判断是左右滑动还是上下滑动
 // pull refresh
 - (void)reloadTableViewDataSource;
 - (void)doneLoadingTableViewData;
@@ -81,10 +81,10 @@
     
     // 只是第一个一级新闻栏目能有headerLogo标志
     if (self.isFirstNewsVC) {
-        self.listTableViewY = [ColumnBarConfig sharedColumnBarConfig].columnBarHeight+kStatusBarHeight;
+        self.listTableViewY = [ColumnBarConfig sharedColumnBarConfig].columnBarHeight+kStatusBarHeight-20;
         self.columnHeaderHeight = [ColumnBarConfig sharedColumnBarConfig].columnHeaderHeight;
     } else {
-        self.listTableViewY = [ColumnBarConfig sharedColumnBarConfig].columnBtnHeight+kStatusBarHeight;
+        self.listTableViewY = [ColumnBarConfig sharedColumnBarConfig].columnBtnHeight+kStatusBarHeight-20;
         self.columnHeaderHeight = 0;
     }
     
@@ -100,7 +100,7 @@
     scrollViewbg.userInteractionEnabled = YES;
     scrollViewbg.showsHorizontalScrollIndicator = NO;
     scrollViewbg.showsVerticalScrollIndicator = NO;
-    
+    //NSLog(@"bounds:%@,height:%f",NSStringFromCGRect(self.view.bounds),kSHeight);
     [self.view addSubview:self.scrollViewbg];
     self.adViewControllers = [[NSMutableSet alloc] init];
     self.lifeControllers = [[NSMutableSet alloc] init];
@@ -114,7 +114,7 @@
     isRefresh = NO;
     
     columnBar = [[ColumnBar alloc] initWithFrame:CGRectMake(0, kStatusBarHeight+self.columnHeaderHeight, kSWidth, [ColumnBarConfig sharedColumnBarConfig].columnBtnHeight) withIsFirstNewsVC:self.isFirstNewsVC ViewControllerType:self.viewControllerType];
-    
+    //NSLog(@"haha:%@",NSStringFromCGRect(columnBar.frame));
     [self loadColumns];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateForBUPOColumns) name:@"updateForBUPOColumns" object:nil];
     // 监听重复点击tabbar回到顶部
@@ -133,6 +133,7 @@
         CacheManager *manager = [CacheManager sharedCacheManager];
         hasMore = [manager hasMore:columnId rowNumber:rowNumber];
         self.articles = array;
+        
         
         [self loadHeaderWidget];
         [self loadArticlesFinished];
@@ -285,7 +286,7 @@
         controller.delegate = self;
         controller.view.tag = 333;
         moreView = controller.view;
-        moreView.frame = CGRectMake(0, 0, kSWidth, kSHeight);
+        moreView.frame = CGRectMake(0, -2, kSWidth, kSHeight+2);
     }
     
     moreView.alpha = 0;
@@ -311,6 +312,7 @@
   
     [self initTableViewFrame];
     if ([self isMemberOfClass:NSClassFromString(@"NormalPageController")]) {
+#warning 代码注释掉
         [self columnBar:nil didSelectedTabAtIndex:0];
         return;
     }
@@ -375,10 +377,11 @@
     }
     if (index == self.lastSelectedIndex && _success == YES){
         //回到顶部
-        [self.listTableView setContentOffset:CGPointMake(0, 0) animated:YES];
+#warning 注释掉
+     //   [self.listTableView setContentOffset:CGPointMake(0, 0) animated:YES];
         return;
     }
-    
+    self.scrollViewStartPosPoint=CGPointMake(kSWidth*index, scrollViewbg.contentOffset.y);
     self.lastSelectedIndex = index;
     columnBar.selectedIndex = index;
     
@@ -392,12 +395,14 @@
     Column *column = [columns objectAtIndex:index];
     
     [MobClick event:@"function_nav" attributes:@{@"home_custom_column_button_click":column.columnName}];
-    [self titleLableWithTitle:column.columnName];
+#warning 先注释
+   // [self titleLableWithTitle:column.columnName];
     NSArray *cacheArticles = [ArticleRequest getCacheArticlesWithColumnId:column.columnId rowNumber:0];
     self.articles = cacheArticles;
     CacheManager *manager = [CacheManager sharedCacheManager];
     hasMore = [manager hasMore:column.columnId rowNumber:0];
-    [self.listTableView reloadData];
+#warning reloadData注释
+    //[self.listTableView reloadData];
     
     [self loadHeaderWidget];
     
@@ -407,9 +412,9 @@
     
     NSDate *currentdate = [NSDate date];
     NSTimeInterval subdate = [currentdate timeIntervalSinceDate:column.lastupdatetime];
-    
     [scrollViewbg scrollRectToVisible:CGRectMake(kSWidth*index,0,kSWidth,kSHeight) animated:NO];
     
+    NSLog(@"*********:%f,kSWidth:%@",scrollViewbg.contentOffset.x,NSStringFromCGRect(scrollViewbg.bounds));
     if ((subdate > [ColumnBarConfig sharedColumnBarConfig].columnRefreshInterval)||
         (column.lastupdatetime == nil))
     {
@@ -418,6 +423,7 @@
     }
     else
     {
+        
         [self loadArticlesFinished];
     }
     //统计栏目点击事件
@@ -482,12 +488,14 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if (scrollViewbg == scrollView) {
+        self.isVer=NO;
         if(scrollView.contentOffset.x < 0){
             scrollViewbg.scrollEnabled = NO;
         }
         else{
             
             scrollViewbg.scrollEnabled = YES;
+        
             if ([columns count]) {
                 // 因为scrollview上的vc不执行viewwilldisapear，故在此去除键盘
                 for (UIViewController *vc in self.childViewControllers) {
@@ -496,15 +504,18 @@
                         break;
                     }
                 }
+//                NSLog(@"##scrollViewStartPosPoint:%@,**scrollView:%@,scrollViewbg.contentOffset:%@",NSStringFromCGPoint(self.scrollViewStartPosPoint),NSStringFromCGPoint(scrollView.contentOffset),NSStringFromCGPoint(scrollViewbg.contentOffset));
                 [self listTVPages];
             }
             isScrollDrag = NO;
         }
+    }else if ([scrollView isKindOfClass:[FMArticlesListTableView class]]){
+        self.isVer=YES;
     }
     else{
-        
+        self.isVer=NO;
         CGFloat yy = scrollView.contentOffset.y;
-        if(yy < 0 && yy > -20.0f && self.currentColumnIndex == 0 && isFirstLoadArticle == NO){
+        if(yy < 0 && yy >= -20.0f && self.currentColumnIndex == 0 && isFirstLoadArticle == NO){
             if([AppConfig sharedAppConfig].isHomeAddSearch && self.isMain && [ColumnBarConfig sharedColumnBarConfig].columnHeaderScale < 1.4){
                 [_searchView removeFromSuperview];
                 [scrollView addSubview:_searchView];
@@ -523,22 +534,6 @@
             [UIView commitAnimations];
         }
     }
-    
-    //测试加 让ScrollView只向一个方向滑动
-    if (self.scrollDirection == 0){//we need to determine direction
-        if ( fabs(self.scrollViewStartPosPoint.x-scrollView.contentOffset.x)<
-            fabs(self.scrollViewStartPosPoint.y-scrollView.contentOffset.y)){
-            self.scrollDirection = 1;
-        } else {
-            self.scrollDirection = 2;
-        }
-    }
-    if (self.scrollDirection == 1) {
-        scrollView.contentOffset = CGPointMake(self.scrollViewStartPosPoint.x,scrollView.contentOffset.y);
-    } else if (self.scrollDirection == 2){
-        scrollView.contentOffset = CGPointMake(scrollView.contentOffset.x,self.scrollViewStartPosPoint.y);
-    }
-    
     [_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
     [self testScrollView:scrollView];
 }
@@ -591,6 +586,7 @@
 
 - (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view
 {
+    
     return _reloading; // should return if data source model is reloading
 }
 
@@ -625,17 +621,22 @@
 
 -(void)initTableViewFrame
 {
-    scrollViewbg.contentSize = CGSizeMake(kSWidth *columns.count, kSHeight);
+    scrollViewbg.contentSize = CGSizeMake(kSWidth *columns.count, 1);
     self.listTableView.frame = CGRectMake(self.listTableView.frame.origin.x, self.listTableViewY, kSWidth, kSHeight-self.listTableViewY-kTabBarHeight);
-    self.listTableView.height = (self.isNotOneLevelNewsVC||self.isNotTabNewsVC) ? self.listTableView.height+kTabBarHeight+kStatusBarHeight: self.listTableView.height+kStatusBarHeight;
+    self.listTableView.height = (self.isNotOneLevelNewsVC||self.isNotTabNewsVC) ? self.listTableView.height+kTabBarHeight: self.listTableView.height;
+    NSLog(@"frame:%@,%f",NSStringFromCGRect(self.listTableView.frame),kSHeight);
+    
 }
 
 //当滚动视图停止
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;{
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    if(self.isVer){
+        return;
+    }
     if (scrollView == scrollViewbg) {
         int currentPage = floor((scrollView.contentOffset.x - scrollView.frame.size.width / 2) /  scrollView.frame.size.width) + 1;
-        XYLog(@"curtentpage==%d",currentPage);
+        XYLog(@"curtentpage==%d,contentOfSet:%f",currentPage,scrollView.contentOffset.x);
         
         for (FMArticlesListTableView *page in visiblePages) {
             if (page.index == currentPage) {
@@ -645,7 +646,10 @@
             }
         }
         [self.listTableView sendSubviewToBack:_searchView];
+        
         [columnBar selectTabAtIndex:currentPage];
+        
+        
     }
 }
 
@@ -666,7 +670,7 @@
         if (page.index < firstNeededPageIndex || page.index > lastNeededPageIndex) {
             [recycledPages addObject:page];
             [page removeFromSuperview];
-            XYLog(@"%zd--removeFromSuperview",page.index);
+            //XYLog(@"%zd--removeFromSuperview",page.index);
         }
     }
     [visiblePages minusSet:recycledPages];
@@ -676,6 +680,7 @@
     {
         Column * c = self.columns[index];
         if ([c.columnStyle isEqualToString:@"服务分类"] || [c.columnStyle isEqualToString:@"问答+"] ||[c.columnStyle isEqualToString:@"话题+"]||[c.columnStyle isEqualToString:@"推荐"] || [c.columnStyle isEqualToString:@"话题详情"]) {
+#warning 注释掉，运行有问题
             [self configurePage:nil forIndex:index];
             continue;
         }
@@ -696,7 +701,7 @@
                 page.dataSource = self;
             }
             
-            //赋值给tableviewPage
+            //赋值给tableviewPage   
             [self configurePage:page forIndex:index];
             
             if (_refreshHeaderView == nil)
@@ -760,6 +765,7 @@
 - (void)configurePage:(FMArticlesListTableView *)page forIndex:(NSUInteger)index
 {
     page.index = index;
+//    page.backgroundColor=[UIColor purpleColor];
     self.listTableView = page;
     // 添加搜索框，之前再newspagecontroller的viewdidload添加，但网络不好情况下self.listTableView为nil
     [self addHomeSearchView];
@@ -1012,21 +1018,24 @@
     [self loadHeaderWidget];
     if (self.viewControllerType == FDViewControllerForDetailVC && [self.parentColumn.columnStyle isEqualToString:@"新闻"] && self.parentColumn.hasSubColumn) {
         scrollViewbg.frame = CGRectMake(0, self.listTableViewY, kSWidth,kSHeight-self.listTableViewY);
-        scrollViewbg.contentSize = CGSizeMake(kSWidth *columns.count, kSHeight-self.listTableViewY);
-        page.frame = CGRectMake(scrollViewbg.frame.size.width*index, 0, kSWidth,kSHeight-self.listTableViewY);
-        page.height = page.height+kStatusBarHeight;
+        //scrollViewbg.contentSize = CGSizeMake(kSWidth *columns.count, kSHeight-self.listTableViewY);
+        scrollViewbg.contentSize = CGSizeMake(kSWidth *columns.count, 1);
+        page.frame = CGRectMake(scrollViewbg.frame.size.width*index, 0, kSWidth,kSHeight-self.listTableViewY-kTabBarHeight);
+        page.height = page.height;
     }else{
         page.frame = CGRectMake(scrollViewbg.frame.size.width*index, self.listTableViewY, kSWidth,kSHeight-self.listTableViewY-kNavBarHeight);
-        page.height = (self.isNotOneLevelNewsVC||self.isNotTabNewsVC) ? page.height+kTabBarHeight+kStatusBarHeight : page.height+kStatusBarHeight;
+        page.height = (self.isNotOneLevelNewsVC||self.isNotTabNewsVC) ? page.height+kTabBarHeight : page.height;
     }
-    [page reloadData];
+#warning -先注释掉
+   // [page reloadData];
 }
 
 
 - (void)refreshcolumnbar:(int) columnID{
     columnBar.selectedIndex = columnID;
     [self updateColumns];
-    scrollViewbg.contentSize = CGSizeMake(kSWidth *columns.count, kSHeight);
+//    scrollViewbg.contentSize = CGSizeMake(kSWidth *columns.count, kSHeight);
+    scrollViewbg.contentSize = CGSizeMake(kSWidth *columns.count, 1);
     [columnBar reloadData:self.parentColumn];
     [columnBar selectTabAtIndex:columnBar.selectedIndex];
 }
@@ -1050,6 +1059,7 @@
     self.listTableView.tableHeaderView = headerView;
 
 }
+
 
 -(NSArray *)headerArticleArray:(Column *)column
 {

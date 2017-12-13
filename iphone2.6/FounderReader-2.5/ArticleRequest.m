@@ -22,6 +22,13 @@
 
 @implementation ArticleRequest
 
+- (id)initWithGovAffairWithSid:(NSString *)str
+{
+    NSString * url = [NSString stringWithFormat:@"%@/api/%@?&sid=%@", [AppConfig sharedAppConfig].serverIf,str, [AppConfig sharedAppConfig].sid];
+    self = [super initWithURL:url];
+    return self;
+}
+
 - (id)initWithColumnId:(int)columnId lastFileId:(int)lastFileId count:(int)count rowNumber:(int)rowNumber
 {
     NSString * url = [NSString stringWithFormat:@"%@/api/getArticles?&sid=%@&cid=%d&lastFileID=%d&count=%d&rowNumber=%d", [AppConfig sharedAppConfig].serverIf, [AppConfig sharedAppConfig].sid, columnId, lastFileId, count, rowNumber];
@@ -267,4 +274,8 @@
     return articles;
 }
 
++ (id)govAffairRequestWithSid:(NSString *)str
+{
+    return [[self alloc] initWithGovAffairWithSid:str];
+}
 @end

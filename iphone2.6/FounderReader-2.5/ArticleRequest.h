@@ -29,4 +29,6 @@
 + (id)articleHotRequestWithColumnId:(int)siteID lastFileId:(int)lastFileId rowNumber:(int)rowNumber type:(int)type columnId:(int)columnId;
 - (id)initHotWithColumnId:(int)siteID lastFileId:(int)lastFileId rowNumber:(int)rowNumber type:(int)type columnId:(int)columnId;
 
++ (id)govAffairRequestWithSid:(NSString *)str;
+
 @end
